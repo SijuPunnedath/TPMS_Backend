@@ -1,0 +1,23 @@
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Domain/bin/Debug/net9.0/TPMS.Domain.deps.json
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Domain/bin/Debug/net9.0/TPMS.Domain.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Domain/bin/Debug/net9.0/TPMS.Domain.pdb
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Domain/obj/Debug/net9.0/TPMS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Domain/obj/Debug/net9.0/TPMS.Domain.AssemblyInfoInputs.cache
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Domain/obj/Debug/net9.0/TPMS.Domain.AssemblyInfo.cs
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Domain/obj/Debug/net9.0/TPMS.Domain.csproj.CoreCompileInputs.cache
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Domain/obj/Debug/net9.0/TPMS.Domain.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Domain/obj/Debug/net9.0/refint/TPMS.Domain.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Domain/obj/Debug/net9.0/TPMS.Domain.pdb
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Domain/obj/Debug/net9.0/ref/TPMS.Domain.dll
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/bin/Debug/net9.0/TPMS.Domain.deps.json
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/bin/Debug/net9.0/TPMS.Domain.dll
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/bin/Debug/net9.0/TPMS.Domain.pdb
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Debug/net9.0/TPMS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Debug/net9.0/TPMS.Domain.AssemblyInfoInputs.cache
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Debug/net9.0/TPMS.Domain.AssemblyInfo.cs
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Debug/net9.0/TPMS.Domain.csproj.CoreCompileInputs.cache
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Debug/net9.0/TPMS.Domain.sourcelink.json
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Debug/net9.0/TPMS.Domain.dll
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Debug/net9.0/refint/TPMS.Domain.dll
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Debug/net9.0/TPMS.Domain.pdb
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Debug/net9.0/ref/TPMS.Domain.dll

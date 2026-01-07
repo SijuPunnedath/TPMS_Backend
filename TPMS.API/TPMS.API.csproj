@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>12f12daa-955a-4771-b48a-61659fa73b1e</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="MediatR" Version="13.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.10">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore.ReDoc" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\AssetMaintenanceController\Controllers\" />
+    <Folder Include="Areas\AssetMaintenanceController\Data\" />
+    <Folder Include="Areas\AssetMaintenanceController\Models\" />
+    <Folder Include="Areas\AssetMaintenanceController\Views\" />
+    <Folder Include="Areas\DisputesController\Controllers\" />
+    <Folder Include="Areas\DisputesController\Data\" />
+    <Folder Include="Areas\DisputesController\Models\" />
+    <Folder Include="Areas\DisputesController\Views\" />
+    <Folder Include="Areas\RentSchedulesController\Controllers\" />
+    <Folder Include="Areas\RentSchedulesController\Data\" />
+    <Folder Include="Areas\RentSchedulesController\Models\" />
+    <Folder Include="Areas\RentSchedulesController\Views\" />
+    <Folder Include="Filters\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TPMS.Application\TPMS.Application.csproj" />
+  </ItemGroup>
+
+</Project>

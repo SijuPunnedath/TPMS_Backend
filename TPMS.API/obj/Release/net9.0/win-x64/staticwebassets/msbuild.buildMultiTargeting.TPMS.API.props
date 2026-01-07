@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/TPMS.API.props" />
+</Project>

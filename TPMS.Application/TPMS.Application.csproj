@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Addresses\Validators\" />
+    <Folder Include="Features\Auth\Validators\" />
+    <Folder Include="Features\Deposit\Validators\" />
+    <Folder Include="Features\Disputes\DTOs\" />
+    <Folder Include="Features\Disputes\Queries\" />
+    <Folder Include="Features\DocumentCategories\Validators\" />
+    <Folder Include="Features\Documents\Validators\" />
+    <Folder Include="Features\DocumentTypes\Validators\" />
+    <Folder Include="Features\LeaseAlert\Validators\" />
+    <Folder Include="Features\Leases\Validators\" />
+    <Folder Include="Features\Lookups\Commands\" />
+    <Folder Include="Features\OwnerTypes\Validators\" />
+    <Folder Include="Features\Payments\" />
+    <Folder Include="Features\Permissions\Validators\" />
+    <Folder Include="Features\Properties\Validators\" />
+    <Folder Include="Features\RentSchedules\Validators\" />
+    <Folder Include="Features\Reports\Commands\" />
+    <Folder Include="Features\RolePermissions\Validators\" />
+    <Folder Include="Features\Settings\Validators\" />
+    <Folder Include="Features\Tenants\Validators\" />
+    <Folder Include="Features\UserRoles\Validation\" />
+    <Folder Include="Features\Users\Validators\" />
+    <Folder Include="Features\Users\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="ClosedXML" Version="0.105.0" />
+    <PackageReference Include="FluentValidation" Version="12.0.0" />
+    <PackageReference Include="MediatR" Version="13.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.6.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TPMS.Domain\TPMS.Domain.csproj" />
+    <ProjectReference Include="..\TPMS.Infrastructure\TPMS.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

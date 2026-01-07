@@ -1,0 +1,12 @@
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/bin/Release/net9.0/TPMS.Domain.deps.json
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/bin/Release/net9.0/TPMS.Domain.dll
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/bin/Release/net9.0/TPMS.Domain.pdb
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Release/net9.0/TPMS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Release/net9.0/TPMS.Domain.AssemblyInfoInputs.cache
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Release/net9.0/TPMS.Domain.AssemblyInfo.cs
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Release/net9.0/TPMS.Domain.csproj.CoreCompileInputs.cache
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Release/net9.0/TPMS.Domain.sourcelink.json
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Release/net9.0/TPMS.Domain.dll
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Release/net9.0/refint/TPMS.Domain.dll
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Release/net9.0/TPMS.Domain.pdb
+/Volumes/Production/TPMS/TPMS/TPMS.Domain/obj/Release/net9.0/ref/TPMS.Domain.dll

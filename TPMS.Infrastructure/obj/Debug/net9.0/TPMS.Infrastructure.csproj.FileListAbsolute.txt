@@ -1,0 +1,33 @@
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Infrastructure/bin/Debug/net9.0/TPMS.Infrastructure.deps.json
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Infrastructure/bin/Debug/net9.0/TPMS.Infrastructure.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Infrastructure/bin/Debug/net9.0/TPMS.Infrastructure.pdb
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Infrastructure.AssemblyInfoInputs.cache
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Infrastructure.AssemblyInfo.cs
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Infrastructure.csproj.CoreCompileInputs.cache
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Infrastructure.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/refint/TPMS.Infrastructure.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Infrastructure.pdb
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/ref/TPMS.Infrastructure.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Infrastructure/bin/Debug/net9.0/TPMS.Domain.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Infrastructure/bin/Debug/net9.0/TPMS.Domain.pdb
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Infrastructure.csproj.AssemblyReference.cache
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Inf.C24E2869.Up2Date
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/bin/Debug/net9.0/TPMS.Infrastructure.deps.json
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/bin/Debug/net9.0/TPMS.Infrastructure.runtimeconfig.json
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/bin/Debug/net9.0/TPMS.Infrastructure.dll
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/bin/Debug/net9.0/TPMS.Infrastructure.pdb
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/bin/Debug/net9.0/TPMS.Domain.dll
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/bin/Debug/net9.0/TPMS.Domain.pdb
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Infrastructure.csproj.AssemblyReference.cache
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Infrastructure.AssemblyInfoInputs.cache
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Infrastructure.AssemblyInfo.cs
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Infrastructure.csproj.CoreCompileInputs.cache
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Infrastructure.sourcelink.json
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Inf.C24E2869.Up2Date
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Infrastructure.dll
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/refint/TPMS.Infrastructure.dll
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Infrastructure.pdb
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/TPMS.Infrastructure.genruntimeconfig.cache
+/Volumes/Production/TPMS/TPMS/TPMS.Infrastructure/obj/Debug/net9.0/ref/TPMS.Infrastructure.dll

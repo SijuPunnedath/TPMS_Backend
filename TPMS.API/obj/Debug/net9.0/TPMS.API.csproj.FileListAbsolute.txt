@@ -1,0 +1,405 @@
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/appsettings.Development.json
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/appsettings.json
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.API.staticwebassets.endpoints.json
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.API.exe
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.API.deps.json
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.API.runtimeconfig.json
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.API.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.API.pdb
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.OpenApi.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.csproj.AssemblyReference.cache
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.GeneratedMSBuildEditorConfig.editorconfig
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.AssemblyInfoInputs.cache
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.AssemblyInfo.cs
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.csproj.CoreCompileInputs.cache
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.MvcApplicationPartsAssemblyInfo.cache
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/scopedcss/bundle/TPMS.API.styles.css
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets.build.json
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets.development.json
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets/msbuild.TPMS.API.Microsoft.AspNetCore.StaticWebAssets.props
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets/msbuild.TPMS.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets/msbuild.build.TPMS.API.props
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.TPMS.API.props
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.TPMS.API.props
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets.pack.json
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets.upToDateCheck.txt
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.csproj.Up2Date
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/refint/TPMS.API.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.pdb
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.genruntimeconfig.cache
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/ref/TPMS.API.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/FluentValidation.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/MediatR.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/MediatR.Contracts.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Options.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.Application.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.Domain.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.Infrastructure.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.Application.pdb
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.Domain.pdb
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.Infrastructure.pdb
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/ClosedXML.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/ClosedXML.Parser.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/DocumentFormat.OpenXml.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/DocumentFormat.OpenXml.Framework.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/ExcelNumberFormat.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/RBush.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/SixLabors.Fonts.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/System.IO.Packaging.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/AutoMapper.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/AWSSDK.Core.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/AWSSDK.S3.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Azure.Core.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Azure.Storage.Blobs.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Azure.Storage.Common.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/System.ClientModel.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/System.IO.Hashing.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/System.Linq.Dynamic.Core.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/System.Memory.Data.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.MvcApplicationPartsAssemblyInfo.cs
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/BCrypt.Net-Next.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Npgsql.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.csproj.AssemblyReference.cache
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.AssemblyInfoInputs.cache
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.AssemblyInfo.cs
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.csproj.CoreCompileInputs.cache
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.MvcApplicationPartsAssemblyInfo.cs
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.MvcApplicationPartsAssemblyInfo.cache
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.sourcelink.json
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/appsettings.Development.json
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/appsettings.json
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.API.staticwebassets.runtime.json
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.API.staticwebassets.endpoints.json
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.API
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.API.deps.json
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.API.runtimeconfig.json
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.API.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.API.pdb
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Aspire.Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/AutoMapper.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/AWSSDK.Core.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/AWSSDK.S3.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Azure.Core.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Azure.Storage.Blobs.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Azure.Storage.Common.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/BCrypt.Net-Next.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ClosedXML.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ClosedXML.Parser.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/DocumentFormat.OpenXml.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/DocumentFormat.OpenXml.Framework.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ExcelNumberFormat.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/FluentValidation.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Humanizer.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/MediatR.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/MediatR.Contracts.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.AspNetCore.Razor.Language.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Build.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Build.Framework.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Build.Locator.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.Features.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.Elfie.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.Features.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.Razor.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.Scripting.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.DiaSymReader.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.DotNet.Scaffolding.Shared.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Design.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.Design.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Configuration.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Binder.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Json.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Diagnostics.Abstractions.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Diagnostics.HealthChecks.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Physical.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Hosting.Abstractions.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Options.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.NET.StringTools.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.OpenApi.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.VisualStudio.Web.CodeGeneration.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/dotnet-aspnet-codegenerator-design.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Mono.TextTemplating.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Newtonsoft.Json.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Npgsql.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Npgsql.DependencyInjection.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Npgsql.OpenTelemetry.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/NuGet.Common.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/NuGet.Configuration.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/NuGet.DependencyResolver.Core.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/NuGet.Frameworks.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/NuGet.LibraryModel.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/NuGet.Packaging.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/NuGet.ProjectModel.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/NuGet.Protocol.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/NuGet.Versioning.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/OpenTelemetry.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/OpenTelemetry.Api.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/OpenTelemetry.Api.ProviderBuilderExtensions.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/OpenTelemetry.Extensions.Hosting.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/RBush.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/SixLabors.Fonts.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.ReDoc.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.ClientModel.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.CodeDom.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.Composition.AttributedModel.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.Composition.Convention.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.Composition.Hosting.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.Composition.Runtime.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.Composition.TypedParts.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.Configuration.ConfigurationManager.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.IO.Hashing.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.IO.Packaging.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.IO.Pipelines.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.Linq.Dynamic.Core.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.Memory.Data.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.Reflection.MetadataLoadContext.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.Security.Cryptography.ProtectedData.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.Text.Encodings.Web.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/System.Text.Json.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/Twilio.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/af/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ar/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/az/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/bg/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/bn-BD/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/cs/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/da/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/de/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/el/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/es/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/fa/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/fi-FI/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/fr/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/fr-BE/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/he/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/hr/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/hu/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/hy/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/id/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/is/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/it/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ja/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ko-KR/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ku/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/lv/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ms-MY/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/mt/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/nb/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/nb-NO/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/nl/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pl/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pt/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ro/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ru/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/sk/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/sl/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/sr/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/sr-Latn/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/sv/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/th-TH/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/tr/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/uk/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/uz-Cyrl-UZ/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/uz-Latn-UZ/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/vi/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-CN/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hans/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hant/Humanizer.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Features.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Scripting.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Scripting.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Scripting.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Scripting.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Scripting.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Scripting.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Scripting.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Scripting.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Scripting.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Scripting.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/runtimes/win/lib/net9.0/System.Text.Encodings.Web.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.Application.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.Domain.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.Infrastructure.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.Application.pdb
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.Domain.pdb
+/Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.Infrastructure.pdb
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/scopedcss/bundle/TPMS.API.styles.css
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/compressed/bftbkgfi3p-0imfth5dd3.gz
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets.build.json
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets.development.json
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets/msbuild.TPMS.API.Microsoft.AspNetCore.StaticWebAssets.props
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets/msbuild.TPMS.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets/msbuild.build.TPMS.API.props
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.TPMS.API.props
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.TPMS.API.props
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets.pack.json
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.csproj.Up2Date
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/refint/TPMS.API.dll
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.pdb
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.genruntimeconfig.cache
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/ref/TPMS.API.dll
