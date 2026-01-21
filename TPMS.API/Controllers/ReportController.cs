@@ -65,5 +65,22 @@ namespace TPMS.API.Controllers
             var result = await _mediator.Send(query);
             return Ok(result);
         }
+        
+        /// <summary>
+        /// Property Occupancy Report
+        /// </summary>
+        /// <param name="landlordId">Optional landlord filter</param>
+        [HttpGet("property-occupancy")]
+        public async Task<IActionResult> GetPropertyOccupancyReport(
+            [FromQuery] int? landlordId)
+        {
+            var result = await _mediator.Send(
+                new GetPropertyOccupancyReportQuery
+                {
+                    LandlordId = landlordId
+                });
+
+            return Ok(result);
+        }
     }
 }

@@ -614,6 +614,12 @@ namespace TPMS.Infrastructure.Migrations
                     b.Property<int?>("UploadedBy")
                         .HasColumnType("integer");
 
+                    b.Property<DateTime?>("ValidFrom")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime?>("ValidTo")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<string>("Version")
                         .HasColumnType("text");
 
@@ -1487,6 +1493,38 @@ namespace TPMS.Infrastructure.Migrations
                     b.ToTable("RentSchedules");
                 });
 
+            modelBuilder.Entity("TPMS.Domain.Entities.RequiredDocument", b =>
+                {
+                    b.Property<int>("RequiredDocumentID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("RequiredDocumentID"));
+
+                    b.Property<int>("DocumentTypeID")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsMandatory")
+                        .HasColumnType("boolean");
+
+                    b.Property<int>("OwnerTypeID")
+                        .HasColumnType("integer");
+
+                    b.HasKey("RequiredDocumentID");
+
+                    b.HasIndex("DocumentTypeID");
+
+                    b.HasIndex("OwnerTypeID");
+
+                    b.HasIndex("OwnerTypeID", "DocumentTypeID")
+                        .IsUnique();
+
+                    b.ToTable("RequiredDocuments", (string)null);
+                });
+
             modelBuilder.Entity("TPMS.Domain.Entities.Role", b =>
                 {
                     b.Property<int>("RoleID")
@@ -1908,6 +1946,25 @@ namespace TPMS.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("Lease");
+                });
+
+            modelBuilder.Entity("TPMS.Domain.Entities.RequiredDocument", b =>
+                {
+                    b.HasOne("TPMS.Domain.Entities.DocumentType", "DocumentType")
+                        .WithMany()
+                        .HasForeignKey("DocumentTypeID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("TPMS.Domain.Entities.OwnerType", "OwnerType")
+                        .WithMany()
+                        .HasForeignKey("OwnerTypeID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("DocumentType");
+
+                    b.Navigation("OwnerType");
                 });
 
             modelBuilder.Entity("TPMS.Domain.Entities.RolePermission", b =>

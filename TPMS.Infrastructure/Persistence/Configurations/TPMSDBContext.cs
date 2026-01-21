@@ -49,7 +49,7 @@ namespace TPMS.Infrastructure.Persistence.Configurations
         public DbSet<DisputeAttachment> DisputeAttachments { get; set; } = null!;
         public DbSet<DisputeComment> DisputeComments { get; set; } = null!;
         public DbSet<DisputeResolution> DisputeResolutions { get; set; } = null!; 
-        
+        public DbSet<RequiredDocument>  RequiredDocuments{ get; set; } = null!;
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             
@@ -470,6 +470,49 @@ namespace TPMS.Infrastructure.Persistence.Configurations
             modelBuilder.ApplyConfiguration(new DisputeCommentConfiguration());
             modelBuilder.ApplyConfiguration(new DisputeAttachmentConfiguration());
             modelBuilder.ApplyConfiguration(new DisputeResolutionConfiguration());
+            
+            modelBuilder.Entity<RequiredDocument>(entity =>
+            {
+                entity.ToTable("RequiredDocuments");
+
+                // Primary Key
+                entity.HasKey(e => e.RequiredDocumentID);
+
+                entity.Property(e => e.RequiredDocumentID)
+                    .ValueGeneratedOnAdd();
+
+                // Required fields
+                entity.Property(e => e.OwnerTypeID)
+                    .IsRequired();
+
+                entity.Property(e => e.DocumentTypeID)
+                    .IsRequired();
+
+                entity.Property(e => e.IsMandatory)
+                    .IsRequired();
+
+                entity.Property(e => e.IsActive)
+                    .IsRequired();
+
+                // Relationships
+                entity.HasOne(e => e.OwnerType)
+                    .WithMany()
+                    .HasForeignKey(e => e.OwnerTypeID)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasOne(e => e.DocumentType)
+                    .WithMany()
+                    .HasForeignKey(e => e.DocumentTypeID)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                // Unique constraint:
+                // One document type can be required only once per owner type
+                entity.HasIndex(e => new { e.OwnerTypeID, e.DocumentTypeID })
+                    .IsUnique();
+
+                // Performance index
+                entity.HasIndex(e => e.OwnerTypeID);
+            });
             
         }
     }

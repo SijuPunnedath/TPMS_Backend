@@ -8,5 +8,6 @@ public enum AssetStatus
     UnderMaintenance = 4,
     Faulty = 5,
     Decommissioned = 6,
-    Disposed = 7
+    Disposed = 7,
+    Occupied = 8
 }

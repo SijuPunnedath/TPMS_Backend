@@ -55,5 +55,8 @@ namespace TPMS.Domain.Entities
         public virtual DocumentType? DocumentType { get; set; }
         
         public virtual DocumentCategory? DocumentCategory => DocumentType?.Category;
+        
+        public DateTime? ValidFrom { get; set; }
+        public DateTime? ValidTo { get; set; }   // Expiry date (NOC, Lease, Insurance)
     }
 }

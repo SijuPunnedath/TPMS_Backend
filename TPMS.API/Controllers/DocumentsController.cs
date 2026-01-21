@@ -248,7 +248,41 @@ namespace TPMS.API.Controllers
               result.ContentType,
               enableRangeProcessing: true); // 🔥 streaming support
       }
+      
+      /// <summary>
+      /// Get missing documents for an entity (Tenant / Lease / Asset)
+      /// </summary>
+      [HttpGet("missing")]
+      public async Task<IActionResult> GetMissingDocuments(
+          [FromQuery] int ownerTypeId,
+          [FromQuery] int ownerId)
+      {
+          if (ownerTypeId <= 0 || ownerId <= 0)
+              return BadRequest("Invalid ownerTypeId or ownerId.");
 
+          var query = new GetMissingDocumentsQuery(ownerTypeId, ownerId);
+
+          var result = await _mediator.Send(query);
+
+          return Ok(result);
+      }
+
+      /// <summary>
+      /// Get document compliance percentage for an entity
+      /// </summary>
+      [HttpGet("compliance")]
+      public async Task<IActionResult> GetCompliance(
+          [FromQuery] int ownerTypeId,
+          [FromQuery] int ownerId)
+      {
+          if (ownerTypeId <= 0 || ownerId <= 0)
+              return BadRequest("Invalid ownerTypeId or ownerId.");
+
+          var result = await _mediator.Send(
+              new GetDocumentComplianceQuery(ownerTypeId, ownerId));
+
+          return Ok(result);
+      }
 
     }
 }
