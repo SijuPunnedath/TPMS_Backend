@@ -10,7 +10,9 @@
     <Folder Include="Features\Addresses\Validators\" />
     <Folder Include="Features\Auth\Validators\" />
     <Folder Include="Features\Deposit\Validators\" />
+    <Folder Include="Features\Disputes\Commands\" />
     <Folder Include="Features\Disputes\DTOs\" />
+    <Folder Include="Features\Disputes\Handlers\" />
     <Folder Include="Features\Disputes\Queries\" />
     <Folder Include="Features\Disputes\Validators\" />
     <Folder Include="Features\DocumentCategories\Validators\" />

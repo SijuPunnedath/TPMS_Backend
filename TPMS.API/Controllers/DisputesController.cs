@@ -1,7 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TPMS.Application.Features.Disputes.Commands;
+
 
 namespace TPMS.API.Controllers
 {
@@ -16,14 +16,6 @@ namespace TPMS.API.Controllers
             _mediator = mediator;
         }
         
-        [HttpPost]
-        public async Task<IActionResult> Create(CreateDisputeCommand command)
-            => Ok(await _mediator.Send(command));
-
-        [HttpPost("{id}/comments")]
-        public async Task<IActionResult> AddComment(
-            int id,
-            AddDisputeCommentCommand command)
-            => Ok(await _mediator.Send(command with { DisputeId = id }));
+       
     }
 }
