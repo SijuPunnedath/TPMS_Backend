@@ -79,7 +79,7 @@ namespace TPMS.Application.Features.OwnerTypes.Handlers
                     .Select(l => new OwnerNodeDto
                     {
                         OwnerID = l.LeaseID,
-                        OwnerName = l.LeaseName
+                        OwnerName = l.LeaseNumber,//l.LeaseName
                     })
                     .ToListAsync(cancellationToken),
 

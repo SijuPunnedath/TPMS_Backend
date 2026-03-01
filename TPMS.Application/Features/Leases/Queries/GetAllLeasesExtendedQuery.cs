@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TPMS.Application.Common.Models;
 using TPMS.Application.Features.Leases.DTOs;
+using TPMS.Domain.Enums;
 
 namespace TPMS.Application.Features.Leases.Queries
 {
@@ -15,7 +16,9 @@ namespace TPMS.Application.Features.Leases.Queries
         public int? LandlordId { get; set; }
         public int? TenantId { get; set; }
         public int? PropertyId { get; set; }
-        public string? Status { get; set; }
+       // public string? Status { get; set; }
+       public string PropertyName { get; set; }
+       public LeaseStatus? Status { get; set; } = LeaseStatus.Active;
         public DateTime? FromDate { get; set; }
         public DateTime? ToDate { get; set; }
 

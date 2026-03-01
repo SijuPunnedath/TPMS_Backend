@@ -62,7 +62,7 @@ namespace TPMS.Application.Features.Tenants.Handlers;
                     matchingTenantIds.Contains(t.TenantID));
             }
 
-            // ✅ Execute final tenant query
+            // Execute final tenant query
             var tenants = await tenantsQuery
                 .OrderByDescending(t => t.CreatedAt)
                 .ToListAsync(cancellationToken);
@@ -70,17 +70,18 @@ namespace TPMS.Application.Features.Tenants.Handlers;
             if (!tenants.Any())
                 return new List<TenantDto>();
 
-            // ✅ Batch-load all related addresses
+            // Batch-load all related addresses
             var tenantIds = tenants.Select(t => t.TenantID).ToList();
             var addresses = await _db.Addresses
                 .AsNoTracking()
                 .Where(a => a.OwnerTypeID == tenantTypeId && tenantIds.Contains(a.OwnerID))
                 .ToListAsync(cancellationToken);
 
-            // ✅ Map results
+            //  Map results
             return tenants.Select(t => new TenantDto
             {
                 TenantID = t.TenantID,
+                TenantNumber = t.TenantNumber,
                 Name = t.Name,
                 Notes = t.Notes,
                 IsDeleted = t.IsDeleted,

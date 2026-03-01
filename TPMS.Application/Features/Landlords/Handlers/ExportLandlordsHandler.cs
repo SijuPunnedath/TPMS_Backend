@@ -56,6 +56,7 @@ namespace TPMS.Application.Features.Landlords.Handlers
                 .Select(l => new
                 {
                     l.LandlordID,
+                    l.LandlordNumber,
                     l.Name,
                     l.Notes,
                     l.CreatedAt,
@@ -95,21 +96,23 @@ namespace TPMS.Application.Features.Landlords.Handlers
 
             // Header
             ws.Cell(1, 1).Value = "LandlordID";
-            ws.Cell(1, 2).Value = "Name";
-            ws.Cell(1, 3).Value = "Notes";
-            ws.Cell(1, 4).Value = "CreatedAt";
-            ws.Cell(1, 5).Value = "UpdatedAt";
-            ws.Cell(1, 6).Value = "Address";
+            ws.Cell(1, 2).Value = "Landlord Number";
+            ws.Cell(1, 3).Value = "Name";
+            ws.Cell(1, 4).Value = "Notes";
+            ws.Cell(1, 5).Value = "CreatedAt";
+            ws.Cell(1, 6).Value = "UpdatedAt";
+            ws.Cell(1, 7).Value = "Address";
 
             int row = 2;
             foreach (var l in landlords)
             {
                 ws.Cell(row, 1).Value = l.GetType().GetProperty("LandlordID")?.GetValue(l)?.ToString();
-                ws.Cell(row, 2).Value = l.GetType().GetProperty("Name")?.GetValue(l)?.ToString();
-                ws.Cell(row, 3).Value = l.GetType().GetProperty("Notes")?.GetValue(l)?.ToString();
-                ws.Cell(row, 4).Value = l.GetType().GetProperty("CreatedAt")?.GetValue(l)?.ToString();
-                ws.Cell(row, 5).Value = l.GetType().GetProperty("UpdatedAt")?.GetValue(l)?.ToString();
-                ws.Cell(row, 6).Value = l.GetType().GetProperty("Address")?.GetValue(l)?.ToString();
+                ws.Cell(row, 2).Value = l.GetType().GetProperty("LandlordNumber")?.GetValue(l)?.ToString();
+                ws.Cell(row, 3).Value = l.GetType().GetProperty("Name")?.GetValue(l)?.ToString();
+                ws.Cell(row, 4).Value = l.GetType().GetProperty("Notes")?.GetValue(l)?.ToString();
+                ws.Cell(row, 5).Value = l.GetType().GetProperty("CreatedAt")?.GetValue(l)?.ToString();
+                ws.Cell(row, 6).Value = l.GetType().GetProperty("UpdatedAt")?.GetValue(l)?.ToString();
+                ws.Cell(row, 7).Value = l.GetType().GetProperty("Address")?.GetValue(l)?.ToString();
                 row++;
             }
 

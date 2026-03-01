@@ -30,7 +30,7 @@ public class GetDocumentReportHandler :
             .AsQueryable();
 
         // --------------------
-        // 🔍 FILTERING
+        //  FILTERING
         // --------------------
         if (!string.IsNullOrWhiteSpace(request.SearchTerm))
         {
@@ -70,13 +70,13 @@ public class GetDocumentReportHandler :
             .ToListAsync(cancellationToken);
 
         // --------------------
-        // 🧩 LOAD OWNER TYPE NAMES (Map OwnerTypeID → Name)
+        //  LOAD OWNER TYPE NAMES (Map OwnerTypeID → Name)
         // --------------------
         var ownerTypeMap = await _db.OwnerTypes
             .ToDictionaryAsync(o => o.OwnerTypeID, o => o.Name ?? "", cancellationToken);
 
         // --------------------
-        // 👤 LOAD USER NAMES FOR UploadedBy
+        //  LOAD USER NAMES FOR UploadedBy
         // --------------------
         var userIds = documents
             .Where(d => d.UploadedBy.HasValue)
@@ -94,6 +94,9 @@ public class GetDocumentReportHandler :
         var items = documents.Select(d => new DocumentReportDto
         {
             DocumentID = d.DocumentID,
+            DocumentNumber = d.DocumentNumber,
+            ValidFrom = d.ValidFrom,
+            ValidTo = d.ValidTo,
             OwnerType = ownerTypeMap.ContainsKey(d.OwnerTypeID)
                 ? ownerTypeMap[d.OwnerTypeID]
                 : "Unknown",

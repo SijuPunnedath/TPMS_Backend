@@ -25,6 +25,8 @@ namespace TPMS.Application.Features.Documents.DTOs
         public string? DocType { get; set; }           // optional human-friendly type name
         public int? UploadedBy { get; set; }
         public string? Description { get; set; }
+        public DateTime? ValidFrom { get; set; }
+        public DateTime? ValidTo { get; set; }  
 
         [Required]
         public IFormFile File { get; set; } = default!; // current chunk bytes

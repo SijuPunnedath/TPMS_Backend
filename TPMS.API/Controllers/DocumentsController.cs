@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TPMS.Application.Features.Documents.Commands;
@@ -178,6 +179,8 @@ namespace TPMS.API.Controllers
       /// <summary>
       /// Stream-based document upload (supports large files up to 1 GB)
       /// </summary>
+      
+      //[Authorize]
       [HttpPost("upload-stream")]
       [DisableRequestSizeLimit]
       [RequestSizeLimit(1024L * 1024 * 1024)] // 1 GB
@@ -280,6 +283,19 @@ namespace TPMS.API.Controllers
 
           var result = await _mediator.Send(
               new GetDocumentComplianceQuery(ownerTypeId, ownerId));
+
+          return Ok(result);
+      }
+      
+      [HttpPost("upload-v2")]
+      public async Task<IActionResult> UploadV2(
+          [FromForm] UploadDocumentStremDto dto)
+      {
+          var result = await _mediator.Send(
+              new UploadDocumentStreamV2Command
+              {
+                  Document = dto
+              });
 
           return Ok(result);
       }

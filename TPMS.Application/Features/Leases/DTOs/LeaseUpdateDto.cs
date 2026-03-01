@@ -15,7 +15,7 @@ namespace TPMS.Application.Features.Leases.DTOs
         public int? LandlordID { get; set; }
 
         public LeaseType LeaseType { get; set; }   // 🔒 Explicit change
-
+        public int? ParentLeaseID { get; set; } // For Renewal 
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         
@@ -24,7 +24,8 @@ namespace TPMS.Application.Features.Leases.DTOs
         public decimal Rent { get; set; }
         public decimal Deposit { get; set; }
 
-        public string Status { get; set; }
+       // public string Status { get; set; }
+       public LeaseStatus? Status { get; set; } = LeaseStatus.Active;
         public string PaymentFrequency { get; set; }
 
         public decimal? Commission { get; set; }

@@ -130,8 +130,10 @@ namespace TPMS.Application.Features.Leases.Handlers
                 return new LeaseWithSearchTermDto
                 {
                     LeaseID = l.LeaseID,
+                    LeaseNumber = l.LeaseNumber,
                     LeaseName = l.LeaseName,
                     PropertyID = l.PropertyID,
+                    PropertyNumber = l.Property?.PropertyNumber ?? "",
                     TenantID = l.TenantID,
                     LandlordID = l.LandlordID,
 

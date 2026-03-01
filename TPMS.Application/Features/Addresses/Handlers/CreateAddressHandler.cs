@@ -30,7 +30,7 @@ public class CreateAddressHandler : IRequestHandler<CreateAddressCommand, int>
             Phone1 = dto.Phone1,
             Phone2 = dto.Phone2,
             Email = dto.Email,
-            IsPrimary = dto.IsPrimary
+            IsPrimary = false//dto.IsPrimary
         };
 
         _db.Addresses.Add(address);

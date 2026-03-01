@@ -29,13 +29,14 @@ namespace TPMS.Application.Features.Landlords.Handlers
             var landlord = new Landlord
             {
                 Name = request.Landlord.Name,
+                LandlordNumber = request.Landlord.LandlordNumber,
                 Notes = request.Landlord.Notes,
                 CreatedAt = DateTime.UtcNow,
                 UpdatedAt = DateTime.UtcNow
             };
 
             _db.Landlords.Add(landlord);
-            await _db.SaveChangesAsync(cancellationToken);
+           await _db.SaveChangesAsync(cancellationToken);
 
             var ownerTypeId = await _db.OwnerTypes
             .Where(o => o.Name == "Landlord")
@@ -55,7 +56,7 @@ namespace TPMS.Application.Features.Landlords.Handlers
                 Email = request.Landlord.LandlordAddress.Email,
                 IsPrimary = true
             };
-
+           
             _db.Addresses.Add(address);
             await _db.SaveChangesAsync(cancellationToken);
             await _cache.RefreshLandlordsAsync();

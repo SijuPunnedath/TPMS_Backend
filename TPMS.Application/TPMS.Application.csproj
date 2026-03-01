@@ -12,6 +12,7 @@
     <Folder Include="Features\Deposit\Validators\" />
     <Folder Include="Features\Disputes\DTOs\" />
     <Folder Include="Features\Disputes\Queries\" />
+    <Folder Include="Features\Disputes\Validators\" />
     <Folder Include="Features\DocumentCategories\Validators\" />
     <Folder Include="Features\Documents\Validators\" />
     <Folder Include="Features\DocumentTypes\Validators\" />

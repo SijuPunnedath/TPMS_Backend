@@ -16,6 +16,27 @@ namespace TPMS.API.Controllers
             _mediator = mediator;
         }
 
+        [HttpGet("available-outbound")]
+        public async Task<IActionResult> GetAvailableOutbound(
+            CancellationToken cancellationToken)
+        {
+            var result = await _mediator.Send(
+                new GetAvailableOutboundPropertiesQuery(),
+                cancellationToken);
+
+            return Ok(result);
+        }
+        [HttpGet("available-inbound")]
+        public async Task<IActionResult> GetAvailableInbound(
+            CancellationToken cancellationToken)
+        {
+            var result = await _mediator.Send(
+                new GetAvailableInboundPropertiesQuery(),
+                cancellationToken);
+
+            return Ok(result);
+        }
+        
         [HttpGet("tenants")]
         public async Task<IActionResult> GetTenants() =>
             Ok(await _mediator.Send(new GetTenantLookupQuery()));

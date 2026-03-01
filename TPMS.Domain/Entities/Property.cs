@@ -1,9 +1,12 @@
+using TPMS.Domain.Enums;
+
 namespace TPMS.Domain.Entities
 {
     public class Property
     {
         public int PropertyID { get; set; }
         
+        public string PropertyNumber { get; set; }
         public string PropertyName { get; set; } = string.Empty;
 
         public string? SerialNo { get; set; }
@@ -20,6 +23,11 @@ namespace TPMS.Domain.Entities
 
         // Soft delete
         public bool IsDeleted { get; set; } = false;
+        
+        public PropertyStatus Status { get; set; }
+        public int? ActiveInboundLeaseId { get; set; }
+        public int? ActiveOutboundLeaseId { get; set; }
+
 
     }
 }

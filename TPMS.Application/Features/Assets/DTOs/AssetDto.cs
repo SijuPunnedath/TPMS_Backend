@@ -7,7 +7,9 @@ public class AssetDto
 {
     public int AssetId { get; set; }
     public string AssetName { get; set; }
-
+    
+    public int PropertyId { get; set; }
+    public string PropertyName { get; set; }
     public string Category { get; set; }
     public string SubCategory { get; set; }
 

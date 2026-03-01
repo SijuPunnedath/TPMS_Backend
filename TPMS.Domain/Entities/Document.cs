@@ -42,6 +42,8 @@ namespace TPMS.Domain.Entities
        
         public int? PreviousDocumentID { get; set; }
 
+        public string? DocumentNumber { get; set; }
+
         // Optional description or notes
         public string? Description { get; set; }
 

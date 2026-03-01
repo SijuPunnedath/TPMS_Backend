@@ -10,6 +10,8 @@ namespace TPMS.Domain.Entities
         public decimal Amount { get; set; }
         public string? Status { get; set; }
         public bool IsPaid { get; set; } = false;
+       
+        public bool IsClosed { get; set; } = false;
         public DateTime? PaidDate { get; set; }
         public decimal? Penalty { get; set; }
       

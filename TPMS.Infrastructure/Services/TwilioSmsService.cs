@@ -16,7 +16,7 @@ public class TwilioSmsService : ISmsService
         _settings = settings.Value;
         TwilioClient.Init(_settings.Sid, _settings.Token);
     }
-
+ 
     public async Task SendSmsAsync(string phone, string message)
     {
         await MessageResource.CreateAsync(

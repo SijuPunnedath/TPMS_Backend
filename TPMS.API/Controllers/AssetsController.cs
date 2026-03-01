@@ -17,6 +17,16 @@ namespace TPMS.API.Controllers
         {
             _mediator = mediator;
         }
+        
+        //  Get All Assets (All Properties)
+        [HttpGet]
+        public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
+        {
+            var result = await _mediator.Send(
+                new GetAllAssetsQuery(), cancellationToken);
+
+            return Ok(result);
+        }
 
         [HttpPost]
         public async Task<IActionResult> Create(CreateAssetDto dto)

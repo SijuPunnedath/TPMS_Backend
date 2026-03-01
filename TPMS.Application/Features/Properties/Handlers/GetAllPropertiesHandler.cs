@@ -40,6 +40,7 @@ namespace TPMS.Application.Features.Properties.Handlers
                     {
                         PropertyID = p.PropertyID,
                         PropertyName = p.PropertyName,
+                        PropertyNumber = p.PropertyNumber,
                         SerialNo = p.SerialNo,
                         Type = p.Type,
                         Size = p.Size,

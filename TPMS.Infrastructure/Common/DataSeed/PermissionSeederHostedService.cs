@@ -36,7 +36,7 @@ public class PermissionSeederHostedService : IHostedService
         }
         catch (Exception ex)
         {
-            // 🔥 DO NOT crash the app
+            //  DO NOT crash the app
             _logger.LogError(ex, "Permission seeding failed.");
         }
     }

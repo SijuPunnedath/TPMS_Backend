@@ -9,6 +9,8 @@ namespace TPMS.Application.Features.Landlords.DTOs
     public class LandlordDto
     {
         public int LandlordID { get; set; }
+        
+        public string LandlordNumber { get; set; }
         public string Name { get; set; } = string.Empty;
         public string? Notes { get; set; }
         public DateTime CreatedAt { get; set; }

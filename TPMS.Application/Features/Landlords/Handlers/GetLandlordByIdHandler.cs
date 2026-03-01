@@ -40,6 +40,7 @@ namespace TPMS.Application.Features.Landlords.Handlers
             return new LandlordDto
             {
                 LandlordID = landlord.LandlordID,
+                LandlordNumber = landlord.LandlordNumber,
                 Name = landlord.Name ?? string.Empty,
                 Notes = landlord.Notes,
                 CreatedAt = landlord.CreatedAt,

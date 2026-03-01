@@ -10,6 +10,7 @@ namespace TPMS.Application.Features.Documents.DTOs
     {
         public int DocumentID { get; set; }
         
+        public string? DocumentNumber { get; set; }
         public string DocumentName { get; set; }
         public int OwnerTypeID { get; set; }
         public int OwnerID { get; set; }
@@ -29,5 +30,7 @@ namespace TPMS.Application.Features.Documents.DTOs
         public int? PreviousDocumentID { get; set; }
         public bool IsActive { get; set; } = true;
         public bool IsDeleted { get; set; } = false;
+        public DateTime? ValidFrom { get; set; }
+        public DateTime? ValidTo { get; set; }
     }
 }

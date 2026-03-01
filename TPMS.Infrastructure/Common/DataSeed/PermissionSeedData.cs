@@ -27,6 +27,7 @@ public static class PermissionSeedData
         New("LEASE_APPROVE", "Approve lease", "Lease"),
         New("LEASE_RENEW", "Renew lease", "Lease"),
         New("LEASE_TERMINATE", "Terminate lease", "Lease"),
+        New("LEASE_SETTLE", "Terminate lease", "Lease"),
 
         // Payment
         New("PAYMENT_RECORD_CREATE", "Record payment", "Payment"),

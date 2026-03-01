@@ -24,8 +24,8 @@ public class GetAllDocumentCategoriesHandler : IRequestHandler<GetAllDocumentCat
         var query = _db.DocumentCategories
             .Where(c => !c.IsDeleted);
 
-        if (!request.IncludeInactive)
-            query = query.Where(c => c.IsActive);
+     /*   if (!request.IncludeInactive)
+            query = query.Where(c => c.IsActive); */
 
         return await query
             .OrderBy(c => c.CategoryName)

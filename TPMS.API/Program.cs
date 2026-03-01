@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using System.Text.Json.Serialization;
 using MediatR;
 using TPMS.API.Common;
 using TPMS.API.Middleware;
@@ -13,9 +14,13 @@ using TPMS.Application.Common.Interfaces;
 using TPMS.Application.Common.Services;
 using TPMS.Application.Features.Auth.Handlers;
 using TPMS.Application.Features.Documents.Handlers;
+using TPMS.Application.Features.Documents.Services;
+using TPMS.Application.Features.DocumentSequences.Services;
+using TPMS.Application.Features.Leases.Services;
 using TPMS.Application.Features.Lookups.Services;
 using TPMS.Application.Mappings;
 using TPMS.Infrastructure.Common.DataSeed;
+using TPMS.Infrastructure.Persistence;
 using TPMS.Infrastructure.Persistence.Configurations;
 using TPMS.Infrastructure.POCO;
 using TPMS.Infrastructure.Services;
@@ -28,7 +33,9 @@ namespace TPMS.API
         public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
+            
+            //-- Enable legacy timestamp behavior
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
             // Configuration for JWT in appsettings (see snippet below)
             var jwtKey = builder.Configuration["Jwt:Secret"];
         
@@ -54,13 +61,18 @@ namespace TPMS.API
 
            builder.Services.AddScoped<IEmailService, SmtpEmailService>();
            builder.Services.AddScoped<ISmsService, TwilioSmsService>();
-
+           builder.Services.AddScoped<ILeaseSettlementService, LeaseSettlementService>();
+           builder.Services.AddScoped<IDocumentNumberService,DocumentNumberService>();
+         
            //-- These services were causing server issues
-           builder.Services.AddHostedService<RentScheduleMonitorService>();
-           builder.Services.AddHostedService<LeaseAlertDispatcherService>();
-           builder.Services.AddHostedService<DocumentUploadCleanupService>();
-           
-           builder.Services.AddHostedService<PermissionSeederHostedService>();
+          // builder.Services.AddHostedService<RentScheduleMonitorService>();
+          // builder.Services.AddHostedService<LeaseAlertDispatcherService>();
+          //builder.Services.AddHostedService<DocumentUploadCleanupService>();
+          
+           //-- Settig lease expiry automatically
+          // builder.Services.AddHostedService<LeaseExpirationService>();
+
+          //builder.Services.AddHostedService<PermissionSeederHostedService>();
 
            //Base url
            builder.Services.Configure<AppSettings>(
@@ -69,6 +81,12 @@ namespace TPMS.API
            builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<UploadDocumentChunkHandler>());
             //builder.Services.AddSingleton<IOwnerTypeCacheService, OwnerTypeCacheService>();
             builder.Services.AddScoped<IFileStorageService, FileStorageService>();
+            
+            //Leaser Alert Services
+          //  builder.Services.AddHostedService<LeaseAlertDailyJob>();
+            builder.Services.AddScoped<ILeaseAlertService, LeaseAlertService>();
+            builder.Services.AddScoped<IDocumentQueryService, DocumentQueryService>();
+            builder.Services.AddScoped<IFileStorageServiceV2, FileStorageServiceV2>();
             
             builder.Services.AddCors(options =>
             {
@@ -81,7 +99,12 @@ namespace TPMS.API
                 });
             });
             
-            builder.Services.AddControllers();
+            builder.Services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.Converters
+                        .Add(new JsonStringEnumConverter());
+                });;
 
             //Mapping SMS class
             builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("Smtp"));
@@ -152,6 +175,20 @@ namespace TPMS.API
             
             var app = builder.Build();
             
+           try
+            {
+                using (var scope = app.Services.CreateScope())
+                {
+                    var context = scope.ServiceProvider.GetRequiredService<TPMSDBContext>();
+                    await DbInitializer.SeedAsync(context);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            } 
+            
             app.UseForwardedHeaders();
             app.UseMiddleware<GlobalExceptionMiddleware>();
             app.UseSwagger();
@@ -168,15 +205,8 @@ namespace TPMS.API
          app.UseAuthentication();
          app.UseAuthorization();
          app.MapControllers();
-         
-         //  Seed default permissions
-         /*using (var scope = app.Services.CreateScope())
-         {
-             var context = scope.ServiceProvider.GetRequiredService<TPMSDBContext>();
-             await PermissionSeeder.SeedAsync(context);
-         }*/
 
-            app.Run();
+         app.Run();
         }
     }
 }

@@ -25,30 +25,22 @@ namespace TPMS.Application.Features.Leases.Handlers
 
         public async Task<LeaseDto?> Handle(GetLeaseByIdQuery request, CancellationToken cancellationToken)
         {
-            var lease = await _db.Leases.AsNoTracking()
-                .FirstOrDefaultAsync(l => l.LeaseID == request.LeaseId && !l.IsDeleted, cancellationToken);
+           // var lease = await _db.Leases.AsNoTracking()
+             //   .FirstOrDefaultAsync(l => l.LeaseID == request.LeaseId && !l.IsDeleted, cancellationToken);
 
+             var lease = await _db.Leases
+                 .AsNoTracking()
+                 .Include(l => l.Property)
+                 .Include(l => l.Landlord)
+                 .FirstOrDefaultAsync(
+                     l => l.LeaseID == request.LeaseId && !l.IsDeleted,
+                     cancellationToken
+                 );
             if (lease == null) return null;
 
             //--  AutoMapper handles nested lists (RentSchedules, LeaseAlerts)
             return _mapper.Map<LeaseDto>(lease);
 
-            //return new LeaseDto
-            //{
-            //    LeaseID = lease.LeaseID,
-            //    PropertyID = lease.PropertyID,
-            //    TenantID = lease.TenantID,
-            //    LandlordID = lease.LandlordID,
-            //    StartDate = lease.StartDate,
-            //    EndDate = lease.EndDate,
-            //    Rent = lease.Rent,
-            //    Deposit = lease.Deposit,
-            //    Status = lease.Status,
-            //    PaymentFrequency = lease.PaymentFrequency,
-            //    PenaltyPolicyID = lease.PenaltyPolicyID,
-            //    CreatedAt = lease.CreatedAt,
-            //    UpdatedAt = lease.UpdatedAt
-            //};
         }
     }
 }

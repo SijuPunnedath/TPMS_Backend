@@ -25,7 +25,7 @@ namespace TPMS.Application.Features.Tenants.Handlers
 
         public async Task<TenantDto?> Handle(GetTenantByIdQuery request, CancellationToken cancellationToken)
         {
-            // ✅ Fetch tenant
+            //  Fetch tenant
             var tenant = await _db.Tenants
                 .AsNoTracking()
                 .FirstOrDefaultAsync(t => t.TenantID == request.TenantId && !t.IsDeleted, cancellationToken);
@@ -33,18 +33,19 @@ namespace TPMS.Application.Features.Tenants.Handlers
             if (tenant == null)
                 return null;
 
-            // ✅ Get OwnerTypeID for "Tenant"
+            //  Get OwnerTypeID for "Tenant"
             int tenantTypeId = _ownerTypeCache.GetOwnerTypeId("Tenant");
 
-            // ✅ Fetch all addresses for this tenant
+            //  Fetch all addresses for this tenant
             var addresses = await _db.Addresses
                 .Where(a => a.OwnerTypeID == tenantTypeId && a.OwnerID == tenant.TenantID)
                 .ToListAsync(cancellationToken);
 
-            // ✅ Map to DTO
+            //  Map to DTO
             var tenantDto = new TenantDto
             {
                 TenantID = tenant.TenantID,
+                TenantNumber = tenant.TenantNumber,
                 Name = tenant.Name ?? string.Empty,
                 Notes = tenant.Notes,
                 CreatedAt = tenant.CreatedAt,

@@ -108,6 +108,18 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vtqdl2ixza"},{"Name":"integrity","Value":"sha256-E6apfEUk4K0gaxw29rFCGDE2u67RWZ09Yx1q1Q180Yo="},{"Name":"label","Value":"_content/TPMS.API/uploads/company-logos/company_logo_f373712a-5c6b-4232-adef-360dd402c347.png"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"8838"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022E6apfEUk4K0gaxw29rFCGDE2u67RWZ09Yx1q1Q180Yo=\u0022"},{"Name":"Last-Modified","Value":"Sun, 04 Jan 2026 06:15:52 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/TPMS.API/uploads/general/General_7/Adobe Scan 20 Nov 2025 (3)_page-0001.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\general\General_7\Adobe Scan 20 Nov 2025 (3)_page-0001.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-AO4R1z27H\u002BkNgHU7Uq0IpA/Dys74yjr7kcwXjKNENGQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"753023"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022AO4R1z27H\u002BkNgHU7Uq0IpA/Dys74yjr7kcwXjKNENGQ=\u0022"},{"Name":"Last-Modified","Value":"Mon, 09 Feb 2026 17:26:48 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/TPMS.API/uploads/general/General_7/Adobe Scan 20 Nov 2025 (3)_page-0001.wszfzq6unl.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\general\General_7\Adobe Scan 20 Nov 2025 (3)_page-0001.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wszfzq6unl"},{"Name":"integrity","Value":"sha256-AO4R1z27H\u002BkNgHU7Uq0IpA/Dys74yjr7kcwXjKNENGQ="},{"Name":"label","Value":"_content/TPMS.API/uploads/general/General_7/Adobe Scan 20 Nov 2025 (3)_page-0001.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"753023"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022AO4R1z27H\u002BkNgHU7Uq0IpA/Dys74yjr7kcwXjKNENGQ=\u0022"},{"Name":"Last-Modified","Value":"Mon, 09 Feb 2026 17:26:48 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/TPMS.API/uploads/landlord/Landlord_2/Anil-New.numbers">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\landlord\Landlord_2\Anil-New.numbers'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

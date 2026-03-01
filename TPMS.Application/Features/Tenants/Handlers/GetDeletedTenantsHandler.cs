@@ -23,7 +23,7 @@ namespace TPMS.Application.Features.Tenants.Handlers
 
         public async Task<IEnumerable<TenantDto>> Handle(GetDeletedTenantsQuery request, CancellationToken cancellationToken)
         {
-            // ✅ Get OwnerTypeID for Tenant safely
+            //  Get OwnerTypeID for Tenant safely
             var ownerTypeId = await _db.OwnerTypes
                 .Where(o => o.Name == "Tenant")
                 .Select(o => (int?)o.OwnerTypeID)
@@ -32,7 +32,7 @@ namespace TPMS.Application.Features.Tenants.Handlers
             if (ownerTypeId == null)
                 throw new InvalidOperationException("OwnerType 'Tenant' not found in the database. Please seed it before using this feature.");
 
-            // ✅ Load all deleted tenants
+            //  Load all deleted tenants
             var deletedTenants = await _db.Tenants
                 .AsNoTracking()
                 .Where(t => t.IsDeleted)
@@ -41,17 +41,18 @@ namespace TPMS.Application.Features.Tenants.Handlers
             if (!deletedTenants.Any())
                 return Enumerable.Empty<TenantDto>();
 
-            // ✅ Batch-load all addresses for these tenants (avoid N+1)
+            //  Batch-load all addresses for these tenants (avoid N+1)
             var tenantIds = deletedTenants.Select(t => t.TenantID).ToList();
 
             var addresses = await _db.Addresses
                 .Where(a => a.OwnerTypeID == ownerTypeId && tenantIds.Contains(a.OwnerID))
                 .ToListAsync(cancellationToken);
 
-            // ✅ Combine results in memory
+            //  Combine results in memory
             var result = deletedTenants.Select(t => new TenantDto
             {
                 TenantID = t.TenantID,
+                TenantNumber = t.TenantNumber,
                 Name = t.Name,
                 Notes = t.Notes,
                 CreatedAt = t.CreatedAt,

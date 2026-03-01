@@ -24,14 +24,14 @@ public class GetMissingDocumentsQueryHandler : IRequestHandler<GetMissingDocumen
             GetMissingDocumentsQuery request,
             CancellationToken cancellationToken)
         {
-            // 1️⃣ Required documents for this OwnerType
+            // 1 Required documents for this OwnerType
             var requiredDocs = await _context.RequiredDocuments
                 .Where(r => r.OwnerTypeID == request.OwnerTypeID && r.IsActive)
                 .Include(r => r.DocumentType)
                     .ThenInclude(dt => dt.Category)
                 .ToListAsync(cancellationToken);
 
-            // 2️⃣ Uploaded + valid documents
+            // 2 Uploaded + valid documents
             var uploadedDocTypeIds = await _context.Documents
                 .Where(d => d.OwnerTypeID == request.OwnerTypeID
                          && d.OwnerID == request.OwnerID
@@ -43,7 +43,7 @@ public class GetMissingDocumentsQueryHandler : IRequestHandler<GetMissingDocumen
                 .Distinct()
                 .ToListAsync(cancellationToken);
 
-            // 3️⃣ Missing documents
+            // 3 Missing documents
             var missingDocs = requiredDocs
                 .Where(r => !uploadedDocTypeIds.Contains(r.DocumentTypeID))
                 .Select(r => new MissingDocumentDto

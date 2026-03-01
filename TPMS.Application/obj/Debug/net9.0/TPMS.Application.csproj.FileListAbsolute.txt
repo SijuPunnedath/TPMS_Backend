@@ -15,12 +15,6 @@ F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Application/bin/Debug/
 F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Application/bin/Debug/net9.0/TPMS.Domain.pdb
 F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Application/bin/Debug/net9.0/TPMS.Infrastructure.pdb
 F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Application/obj/Debug/net9.0/TPMS.App.BDFA2BB5.Up2Date
-/Volumes/Production/TPMS/TPMS/TPMS.Application/obj/Debug/net9.0/TPMS.Application.csproj.AssemblyReference.cache
-/Volumes/Production/TPMS/TPMS/TPMS.Application/obj/Debug/net9.0/TPMS.Application.GeneratedMSBuildEditorConfig.editorconfig
-/Volumes/Production/TPMS/TPMS/TPMS.Application/obj/Debug/net9.0/TPMS.Application.AssemblyInfoInputs.cache
-/Volumes/Production/TPMS/TPMS/TPMS.Application/obj/Debug/net9.0/TPMS.Application.AssemblyInfo.cs
-/Volumes/Production/TPMS/TPMS/TPMS.Application/obj/Debug/net9.0/TPMS.Application.csproj.CoreCompileInputs.cache
-/Volumes/Production/TPMS/TPMS/TPMS.Application/obj/Debug/net9.0/TPMS.Application.sourcelink.json
 /Volumes/Production/TPMS/TPMS/TPMS.Application/bin/Debug/net9.0/TPMS.Application.deps.json
 /Volumes/Production/TPMS/TPMS/TPMS.Application/bin/Debug/net9.0/TPMS.Application.dll
 /Volumes/Production/TPMS/TPMS/TPMS.Application/bin/Debug/net9.0/TPMS.Application.pdb
@@ -28,6 +22,12 @@ F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.Application/obj/Debug/
 /Volumes/Production/TPMS/TPMS/TPMS.Application/bin/Debug/net9.0/TPMS.Infrastructure.dll
 /Volumes/Production/TPMS/TPMS/TPMS.Application/bin/Debug/net9.0/TPMS.Domain.pdb
 /Volumes/Production/TPMS/TPMS/TPMS.Application/bin/Debug/net9.0/TPMS.Infrastructure.pdb
+/Volumes/Production/TPMS/TPMS/TPMS.Application/obj/Debug/net9.0/TPMS.Application.csproj.AssemblyReference.cache
+/Volumes/Production/TPMS/TPMS/TPMS.Application/obj/Debug/net9.0/TPMS.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Production/TPMS/TPMS/TPMS.Application/obj/Debug/net9.0/TPMS.Application.AssemblyInfoInputs.cache
+/Volumes/Production/TPMS/TPMS/TPMS.Application/obj/Debug/net9.0/TPMS.Application.AssemblyInfo.cs
+/Volumes/Production/TPMS/TPMS/TPMS.Application/obj/Debug/net9.0/TPMS.Application.csproj.CoreCompileInputs.cache
+/Volumes/Production/TPMS/TPMS/TPMS.Application/obj/Debug/net9.0/TPMS.Application.sourcelink.json
 /Volumes/Production/TPMS/TPMS/TPMS.Application/obj/Debug/net9.0/TPMS.App.BDFA2BB5.Up2Date
 /Volumes/Production/TPMS/TPMS/TPMS.Application/obj/Debug/net9.0/TPMS.Application.dll
 /Volumes/Production/TPMS/TPMS/TPMS.Application/obj/Debug/net9.0/refint/TPMS.Application.dll

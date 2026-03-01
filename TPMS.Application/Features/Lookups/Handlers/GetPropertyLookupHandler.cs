@@ -23,8 +23,8 @@ public class GetPropertyLookupHandler : IRequestHandler<GetPropertyLookupQuery, 
             {
                 PropertyID = p.PropertyID,
                 Label = $"{p.PropertyName}",
-               // LandlordID = p.LandlordID,
-                //LandlordName = $"{p.Landlord.Name}" 
+                LandlordID = p.LandlordID,
+                LandlordName = $"{p.Landlord.Name}" 
             })
             .ToListAsync(cancellationToken);
     }  

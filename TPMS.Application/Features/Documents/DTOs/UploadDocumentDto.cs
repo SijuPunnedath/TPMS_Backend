@@ -1,4 +1,5 @@
 ﻿
+using System;
 using Microsoft.AspNetCore.Http;
 
 namespace TPMS.Application.Features.Documents.DTOs
@@ -18,6 +19,8 @@ namespace TPMS.Application.Features.Documents.DTOs
         public string? Description { get; set; }
         public string? Version { get; set; }
        
+        public DateTime? ValidFrom { get; set; }
+        public DateTime? ValidTo { get; set; }  
         
        
 

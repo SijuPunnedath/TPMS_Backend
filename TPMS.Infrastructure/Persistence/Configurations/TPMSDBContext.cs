@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.Design;
 using TPMS.Domain.Entities;
 using Document = TPMS.Domain.Entities.Document;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using TPMS.Domain.Enums;
 
 
 namespace TPMS.Infrastructure.Persistence.Configurations
@@ -50,12 +51,16 @@ namespace TPMS.Infrastructure.Persistence.Configurations
         public DbSet<DisputeComment> DisputeComments { get; set; } = null!;
         public DbSet<DisputeResolution> DisputeResolutions { get; set; } = null!; 
         public DbSet<RequiredDocument>  RequiredDocuments{ get; set; } = null!;
+        public DbSet<LeaseAlertRule>  LeaseAlertRules { get; set; } = null!;
+        public DbSet<LeaseSettlement>  LeaseSettlements { get; set; } = null!;
+        public DbSet<DocumentSequence>  DocumentSequences { get; set; } = null!;
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             
             modelBuilder.ApplyConfigurationsFromAssembly(
                 typeof(TPMSDBContext).Assembly);
-            base.OnModelCreating(modelBuilder);
+            
 
 
             modelBuilder.Entity<DocumentAccessLog>(entity =>
@@ -98,26 +103,78 @@ namespace TPMS.Infrastructure.Persistence.Configurations
             modelBuilder.Entity<RefreshToken>().HasKey(r => r.TokenID);
             modelBuilder.Entity<LeaseAlert>().HasKey(a => a.AlertID);
 
-          //  modelBuilder.Entity<Property>().HasKey(p => p.PropertyID);
-            
             modelBuilder.Entity<Property>(entity =>
             {
                 entity.HasKey(e => e.PropertyID);
+
                 entity.Property(p => p.PropertyName)
                     .HasMaxLength(200)
                     .IsRequired();
+
+                entity.Property(p => p.PropertyNumber)
+                    .HasMaxLength(50)
+                    .IsRequired();
+
+                entity.HasIndex(e => e.PropertyNumber)
+                    .IsUnique();
+
+                entity.HasIndex(p => p.PropertyName);
 
                 entity.HasOne(p => p.Landlord)
                     .WithMany(l => l.Properties)
                     .HasForeignKey(p => p.LandlordID)
                     .OnDelete(DeleteBehavior.Restrict);
-                entity.HasIndex(p => p.PropertyName);
             });
-            
-            modelBuilder.Entity<Tenant>(entity =>
+
+            //  modelBuilder.Entity<Property>().HasKey(p => p.PropertyID);
+         /*   modelBuilder.Entity<Property>(entity =>
+            {
+                entity.HasKey(e => e.PropertyID);
+                entity.Property(p => p.PropertyName)
+                    .HasMaxLength(200);
+                   // .IsRequired();
+                   entity.HasIndex(e=> e.PropertyNumber)
+                         .IsUnique();
+                entity.HasOne(p => p.Landlord)
+                    .WithMany(l => l.Properties)
+                    .HasForeignKey(p => p.LandlordID)
+                    .OnDelete(DeleteBehavior.Restrict);
+                entity.HasIndex(p => p.PropertyName);
+            }); */
+         
+         modelBuilder.Entity<Tenant>(entity =>
+         {
+             entity.ToTable("Tenants");
+
+             entity.HasKey(t => t.TenantID);
+   
+             entity.Property(t => t.TenantNumber)
+                 .HasMaxLength(50)
+                 .IsRequired();
+
+             entity.HasIndex(t => t.TenantNumber)
+                 .IsUnique();
+
+             entity.Property(t => t.Name)
+                 .IsRequired()
+                 .HasMaxLength(150);
+
+             entity.HasMany(t => t.Leases)
+                 .WithOne(l => l.Tenant)
+                 .HasForeignKey(l => l.TenantID)
+                 .OnDelete(DeleteBehavior.Restrict);
+         });
+
+         
+         
+        /*    modelBuilder.Entity<Tenant>(entity =>
             {
                 entity.ToTable("Tenants");
                 entity.HasKey(t => t.TenantID);
+               
+                entity.Property(t => t.TenantNumber)
+                    .HasMaxLength(50)
+                    .IsRequired();
 
                 entity.Property(t => t.Name)
                     .IsRequired()
@@ -127,17 +184,79 @@ namespace TPMS.Infrastructure.Persistence.Configurations
                     .WithOne(l => l.Tenant)
                     .HasForeignKey(l => l.TenantID)
                     .OnDelete(DeleteBehavior.Restrict);
+            }); */
+          //  modelBuilder.Entity<Landlord>().HasKey(l => l.LandlordID);
+
+            modelBuilder.Entity<Landlord>(entity =>
+                {
+                    entity.ToTable("Landlords");
+                    entity.HasKey(l => l.LandlordID);
+                    entity.HasIndex((x => x.LandlordNumber))
+                          .IsUnique();
+                }
+
+            );
+                
+          
+            //-- Document Entity constraints
+            modelBuilder.Entity<Document>(entity =>
+            {
+                entity.ToTable("Documents");
+
+                // =========================
+                // Primary Key
+                // =========================
+                entity.HasKey(d => d.DocumentID);
+
+                // =========================
+                // Core Properties
+                // =========================
+                entity.Property(d => d.DocumentName)
+                    .IsRequired()
+                    .HasMaxLength(255);
+
+                //  Document Number (NEW)
+                entity.Property(d => d.DocumentNumber)
+                    .HasMaxLength(50)        // DOC-2026-000123
+                    .IsRequired(false);      // keep nullable for backward compatibility
+
+                entity.HasIndex(e => e.DocumentNumber)
+                    .IsUnique();
+                // Unique constraint (only if present)
+                entity.HasIndex(d => d.DocumentNumber)
+                    .IsUnique()
+                    .HasFilter("\"DocumentNumber\" IS NOT NULL");
+
+                // =========================
+                // Relationships
+                // =========================
+                entity.HasOne(d => d.DocumentType)
+                    .WithMany(dt => dt.Documents)
+                    .HasForeignKey(d => d.DocumentTypeID)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                // Optional: Category shortcut (if exists)
+                // entity.HasOne(d => d.DocumentCategory)
+                //     .WithMany()
+                //     .HasForeignKey(d => d.DocumentCategoryID)
+                //     .OnDelete(DeleteBehavior.Restrict);
+
+                // =========================
+                // Indexes
+                // =========================
+                entity.HasIndex(d => d.DocumentTypeID);
             });
-            modelBuilder.Entity<Landlord>().HasKey(l => l.LandlordID);
-           // modelBuilder.Entity<Document>().HasKey(d => d.DocumentID);
-           modelBuilder.Entity<Document>(entity =>
+
+            
+           // modelBuilder.Entity<Address>().HasKey(a => a.AddressID);
+           modelBuilder.Entity<Address>(builder =>
            {
-               entity.HasKey(d => d.DocumentID);
-               entity.Property(d => d.DocumentName)
-                   .HasMaxLength(255)
-                   .IsRequired();
+               builder.HasKey(a => a.AddressID);
+
+               builder.HasIndex(a => new { a.OwnerTypeID, a.OwnerID })
+                   .HasFilter("\"IsPrimary\" = true")
+                   .IsUnique();
            });
-           modelBuilder.Entity<Address>().HasKey(a => a.AddressID);
             modelBuilder.Entity<KYCType>().HasKey(k => k.KYCTypeID);
             modelBuilder.Entity<PartyKYC>().HasKey(pk => pk.PartyKYCID);
             modelBuilder.Entity<OwnerType>(entity =>
@@ -189,20 +308,22 @@ namespace TPMS.Infrastructure.Persistence.Configurations
 
                 entity.Property(u => u.Email)
                     .IsRequired()
-                    .HasMaxLength(150);
+                    .HasMaxLength(200);
 
                 entity.Property(u => u.PasswordHash)
                     .IsRequired()
                     .HasMaxLength(255);
 
+                // Role relationship
                 entity.HasOne(u => u.Role)
                     .WithMany()
                     .HasForeignKey(u => u.RoleID)
-                    .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete of role
+                    .OnDelete(DeleteBehavior.Restrict);
 
+                // RefreshToken relationship
                 entity.HasMany(u => u.RefreshTokens)
-                    .WithOne()
-                    .HasForeignKey("UserID")
+                    .WithOne(r => r.User)          // reference navigation property
+                    .HasForeignKey(r => r.UserID)  // reference FK property
                     .OnDelete(DeleteBehavior.Cascade);
             });
             
@@ -224,15 +345,7 @@ namespace TPMS.Infrastructure.Persistence.Configurations
                     .OnDelete(DeleteBehavior.Cascade);
             });
             
-            modelBuilder.Entity<RolePermission>()
-                .HasOne(rp => rp.Role)
-                .WithMany(r => r.RolePermissions)
-                .HasForeignKey(rp => rp.RoleID);
-
-            modelBuilder.Entity<RolePermission>()
-                .HasOne(rp => rp.Permission)
-                .WithMany(p => p.RolePermissions)
-                .HasForeignKey(rp => rp.PermissionID);
+           
             
             modelBuilder.Entity<UserRole>(entity =>
             {
@@ -300,6 +413,14 @@ namespace TPMS.Infrastructure.Persistence.Configurations
             });
             
             
+            //-- Lease status COnversion
+            modelBuilder.Entity<Lease>()
+                .Property(l => l.Status)
+                .HasConversion<string>()      //  This is the key
+                .HasMaxLength(50)             // Optional but recommended
+                .HasDefaultValue(LeaseStatus.Active);
+            //- End Lease status conversion
+            
             // -------------------------
             // DepositMaster
             // -------------------------
@@ -349,7 +470,7 @@ namespace TPMS.Infrastructure.Persistence.Configurations
             
             
             
-            modelBuilder.Entity<DocumentType>(entity =>
+         /*   modelBuilder.Entity<DocumentType>(entity =>
             {
                 entity.ToTable("DocumentTypes");
                 entity.HasKey(dt => dt.DocumentTypeID);
@@ -362,15 +483,15 @@ namespace TPMS.Infrastructure.Persistence.Configurations
                     .WithMany(c => c.DocumentTypes)
                     .HasForeignKey(dt => dt.DocumentCategoryID)
                     .OnDelete(DeleteBehavior.Restrict);
-            });
+            }); */
             
-            modelBuilder.Entity<Document>(entity =>
+         /*   modelBuilder.Entity<Document>(entity =>
             {
                 entity.HasOne(d => d.DocumentType)
                     .WithMany(dt => dt.Documents)
                     .HasForeignKey(d => d.DocumentTypeID)
                     .OnDelete(DeleteBehavior.Restrict);
-            });
+            }); */
 
             
             modelBuilder.Entity<DocumentCategory>().HasData(
@@ -381,7 +502,10 @@ namespace TPMS.Infrastructure.Persistence.Configurations
                 new DocumentCategory { DocumentCategoryID = 5, CategoryName = "Owner/Landlord Documents" },
                 new DocumentCategory { DocumentCategoryID = 6, CategoryName = "Maintenance Documents" },
                 new DocumentCategory { DocumentCategoryID = 7, CategoryName = "Legal Documents" },
-                new DocumentCategory { DocumentCategoryID = 8, CategoryName = "Other / Misc." }
+                new DocumentCategory { DocumentCategoryID = 8, CategoryName = "Other / Misc." },
+                new DocumentCategory { DocumentCategoryID = 9, CategoryName = "Rental Deposit Scheme." },
+                new DocumentCategory { DocumentCategoryID = 10, CategoryName = "Dispute Documents." }
+                    
             );
             
             modelBuilder.Entity<LeaseRenewal>(entity =>
@@ -407,7 +531,7 @@ namespace TPMS.Infrastructure.Persistence.Configurations
             
             //Maintanace 
             
-            modelBuilder.Entity<AssetCategory>(entity =>
+        /*   // modelBuilder.Entity<AssetCategory>(entity =>
             {
                 entity.HasKey(x => x.AssetCategoryId);
 
@@ -417,8 +541,8 @@ namespace TPMS.Infrastructure.Persistence.Configurations
 
                 entity.Property(x => x.Code)
                     .IsRequired()
-                    .HasMaxLength(20);
-            });
+                   .HasMaxLength(20);
+            }); */
             
             modelBuilder.Entity<AssetSubCategory>(entity =>
             {
@@ -514,6 +638,220 @@ namespace TPMS.Infrastructure.Persistence.Configurations
                 entity.HasIndex(e => e.OwnerTypeID);
             });
             
+            //LeaseAlertRule
+            modelBuilder.Entity<LeaseAlertRule>(entity =>
+            {
+                // =========================
+                // Table mapping (CRITICAL)
+                // =========================
+                entity.ToTable("LeaseAlertRules");
+
+                // =========================
+                // Primary Key
+                // =========================
+                entity.HasKey(e => e.RuleID);
+
+                entity.Property(e => e.RuleID)
+                    .ValueGeneratedOnAdd();
+
+                // =========================
+                // Required Properties
+                // =========================
+                entity.Property(e => e.RuleCode)
+                    .IsRequired()
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.AlertType)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.PaymentFrequency)
+                    .IsRequired()
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.MessageTemplate)
+                    .IsRequired()
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.DeliveryMethod)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                // =========================
+                // Enum Mapping
+                // =========================
+                
+                
+                entity.Property(x => x.LeaseType)
+                    .HasConversion<string>()
+                    .HasMaxLength(20)
+                    .IsRequired();
+
+                /*entity.Property(e => e.LeaseType)
+                    .HasConversion<string>()
+                    .HasMaxLength(20);*/
+
+                // =========================
+                // Defaults & Auditing
+                // =========================
+                entity.Property(e => e.IsActive)
+                    .HasDefaultValue(true);
+
+                entity.Property(e => e.CreatedAt)
+                    .IsRequired();
+
+                entity.Property(e => e.UpdatedAt)
+                    .IsRequired();
+
+                // =========================
+                // Indexes (Job Performance)
+                // =========================
+
+                // Fast lookup for daily jobs
+                entity.HasIndex(e => new
+                {
+                    e.IsActive,
+                    e.AlertType
+                });
+
+                // Prevent duplicate rule codes (GLOBAL)
+                entity.HasIndex(e => e.RuleCode)
+                    .IsUnique();
+                
+                // =========================
+    // Seed Data (SYSTEM RULES)
+    // =========================
+    entity.HasData(
+        new LeaseAlertRule
+        {
+            RuleID = 1,
+            RuleCode = "LEASE_EXP_30",
+            AlertType = "LeaseExpiry",
+            TriggerDays = 30,
+            LeaseType = LeaseType.Outbound,
+            PaymentFrequency = "Monthly",
+            DeliveryMethod = "Email",
+            MessageTemplate = "Lease expires in {Days} days",
+            RunTime = new TimeSpan(2, 0, 0), // 02:00 AM
+            IsActive = true,
+            CreatedAt = DateTime.SpecifyKind(new DateTime(2024, 1, 1, 0, 0, 0), DateTimeKind.Utc),
+            UpdatedAt = DateTime.SpecifyKind(new DateTime(2024, 1, 1, 0, 0, 0), DateTimeKind.Utc)        },
+        new LeaseAlertRule
+        {
+            RuleID = 2,
+            RuleCode = "LEASE_EXP_7",
+            AlertType = "LeaseExpiry",
+            TriggerDays = 7,
+            LeaseType = LeaseType.Outbound,
+            PaymentFrequency = "Monthly",
+            DeliveryMethod = "Dashboard",
+            MessageTemplate = "Lease expires soon",
+            RunTime = new TimeSpan(2, 0, 0),
+            IsActive = true,
+            CreatedAt = DateTime.SpecifyKind(new DateTime(2024, 1, 1, 0, 0, 0), DateTimeKind.Utc),
+            UpdatedAt = DateTime.SpecifyKind(new DateTime(2024, 1, 1, 0, 0, 0), DateTimeKind.Utc)
+            
+        },
+        new LeaseAlertRule
+        {
+            RuleID = 3,
+            RuleCode = "RENT_DUE",
+            AlertType = "RentDue",
+            TriggerDays = 0,
+            LeaseType = LeaseType.Outbound,
+            PaymentFrequency = "Monthly",
+            DeliveryMethod = "Email",
+            MessageTemplate = "Rent due today",
+            RunTime = new TimeSpan(2, 0, 0),
+            IsActive = true,
+            CreatedAt = DateTime.SpecifyKind(new DateTime(2024, 1, 1, 0, 0, 0), DateTimeKind.Utc),
+            UpdatedAt = DateTime.SpecifyKind(new DateTime(2024, 1, 1, 0, 0, 0), DateTimeKind.Utc)
+
+        },
+        new LeaseAlertRule
+        {
+            RuleID = 4,
+            RuleCode = "RENT_OVERDUE",
+            AlertType = "RentOverdue",
+            TriggerDays = -3,
+            LeaseType = LeaseType.Outbound,
+            PaymentFrequency = "Monthly",
+            DeliveryMethod = "SMS",
+            MessageTemplate = "Rent overdue by {Days} days",
+            RunTime = new TimeSpan(2, 0, 0),
+            IsActive = true,
+            CreatedAt = DateTime.SpecifyKind(new DateTime(2024, 1, 1, 0, 0, 0), DateTimeKind.Utc),
+            UpdatedAt = DateTime.SpecifyKind(new DateTime(2024, 1, 1, 0, 0, 0), DateTimeKind.Utc)
+        }
+    );
+    
+    
+    //-- Seed for Document Sequence
+    
+    modelBuilder.Entity<DocumentSequence>().HasData(
+        new DocumentSequence
+        {
+            Id = 1,
+            ModuleName = "LEASE",
+            Prefix = "LSE",
+            CurrentNumber = 0,
+            NumberLength = 5,
+            ResetEveryYear = true,
+            Year = DateTime.UtcNow.Year
+        },
+        new DocumentSequence
+        {
+            Id = 2,
+            ModuleName = "PROPERTY",
+            Prefix = "PRO",
+            CurrentNumber = 0,
+            NumberLength = 5,
+            ResetEveryYear = false,
+            Year = null
+        },
+        new DocumentSequence
+        {
+            Id = 3,
+            ModuleName = "TENANT",
+            Prefix = "TEN",
+            CurrentNumber = 0,
+            NumberLength = 5,
+            ResetEveryYear = false,
+            Year = null
+        },
+        new DocumentSequence
+        {
+            Id = 4,
+            ModuleName = "INVOICE",
+            Prefix = "INV",
+            CurrentNumber = 0,
+            NumberLength = 6,
+            ResetEveryYear = true,
+            Year = DateTime.UtcNow.Year
+        },
+        new DocumentSequence
+        {
+            Id = 5,
+            ModuleName = "LANDLORD",
+            Prefix = "LLD",
+            CurrentNumber = 0,
+            NumberLength = 6,
+            ResetEveryYear = true,
+            Year = DateTime.UtcNow.Year
+        },
+        new DocumentSequence
+        {
+            Id = 6,
+            ModuleName = "DOCUMENT",
+            Prefix = "DOC",
+            CurrentNumber = 0,
+            NumberLength = 6,
+            ResetEveryYear = true,
+            Year = DateTime.UtcNow.Year
+        }
+    );
+    
+            });
         }
     }
 }

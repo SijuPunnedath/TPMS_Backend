@@ -1,3 +1,4 @@
+
 using System;
 using System.Linq;
 using System.Threading;
@@ -40,7 +41,7 @@ public class UploadDocumentStreamHandler
         var dto = request.Document;
 
         // ---------------------------------------------------
-        // 1️⃣ Resolve OwnerTypeID
+        // 1 Resolve OwnerTypeID
         // ---------------------------------------------------
         if (string.IsNullOrWhiteSpace(dto.OwnerType))
             throw new InvalidOperationException("OwnerType is required.");
@@ -49,7 +50,7 @@ public class UploadDocumentStreamHandler
             _ownerTypeCache.GetOwnerTypeId(dto.OwnerType.Trim());
 
         // ---------------------------------------------------
-        // 2️⃣ Resolve DocumentType
+        // 2 Resolve DocumentType
         // ---------------------------------------------------
         int documentTypeId = dto.DocumentTypeID ?? 0;
         string docTypeName = dto.DocType ?? string.Empty;
@@ -86,7 +87,7 @@ public class UploadDocumentStreamHandler
                 "DocumentType does not belong to the given category.");
 
         // ---------------------------------------------------
-        // 3️⃣ Versioning Logic
+        // 3 Versioning Logic
         // ---------------------------------------------------
         var existingDocs = await _db.Documents
             .Where(d =>
@@ -110,7 +111,7 @@ public class UploadDocumentStreamHandler
         string? fileUrl = null;
 
         // ---------------------------------------------------
-        // 4️⃣ Transaction Start
+        // 4 Transaction Start
         // ---------------------------------------------------
         using var transaction =
             await _db.Database.BeginTransactionAsync(cancellationToken);
@@ -118,7 +119,7 @@ public class UploadDocumentStreamHandler
         try
         {
             // ---------------------------------------------------
-            // 5️⃣ Upload File (Streaming)
+            // 5 Upload File (Streaming)
             // ---------------------------------------------------
             fileUrl = await _fileStorage.SaveFileAsync(
                 dto.File,
@@ -127,11 +128,12 @@ public class UploadDocumentStreamHandler
                 cancellationToken);
 
             // ---------------------------------------------------
-            // 6️⃣ Create Document Entity
+            // 6 Create Document Entity
             // ---------------------------------------------------
             var document = new Document
             {
                 DocumentName = dto.DocumentName,
+                DocumentNumber = dto.DocumentNumber,
                 OwnerTypeID = ownerTypeId,
                 OwnerID = dto.OwnerID,
                 DocumentTypeID = documentTypeId,
@@ -143,7 +145,10 @@ public class UploadDocumentStreamHandler
                 UploadedAt = DateTime.UtcNow,
                 Version = newVersion,
                 Description = dto.Description,
-                IsActive = true
+                IsActive = true,
+                ValidFrom = dto.ValidFrom,
+                ValidTo = dto.ValidTo
+                
             };
 
             if (previousActiveDoc != null)
@@ -154,12 +159,13 @@ public class UploadDocumentStreamHandler
             await transaction.CommitAsync(cancellationToken);
 
             // ---------------------------------------------------
-            // 7️⃣ Return DTO
+            // 7 Return DTO
             // ---------------------------------------------------
             return new DocumentDto
             {
                 DocumentID = document.DocumentID,
                 DocumentName = document.DocumentName,
+                DocumentNumber = document.DocumentNumber,
                 OwnerTypeID = document.OwnerTypeID,
                 OwnerID = document.OwnerID,
                 DocumentTypeID = document.DocumentTypeID,
@@ -173,13 +179,16 @@ public class UploadDocumentStreamHandler
                 UploadedAt = document.UploadedAt,
                 Version = document.Version,
                 Description = document.Description,
-                IsActive = document.IsActive
+                IsActive = document.IsActive,
+                ValidFrom =document.ValidFrom,
+                ValidTo = document.ValidTo 
+                
             };
         }
         catch
         {
             // ---------------------------------------------------
-            // 8️⃣ Rollback Safety
+            // 8 Rollback Safety
             // ---------------------------------------------------
             await transaction.RollbackAsync(cancellationToken);
 

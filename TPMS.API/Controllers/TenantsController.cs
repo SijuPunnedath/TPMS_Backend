@@ -83,6 +83,22 @@ namespace TPMS.API.Controllers
             return Ok(await _mediator.Send(new GetTenantLookupQuery()));
         }
 
+        [HttpGet("{id}/documents")]
+        public async Task<IActionResult> GetDocuments(int id)
+        {
+            var result = await _mediator.Send(
+                new GetTenantDocumentsQuery(id));
 
+            return Ok(result);
+        }
+
+        [HttpGet("{id}/documents/compliance")]
+        public async Task<IActionResult> GetCompliance(int id)
+        {
+            var result = await _mediator.Send(
+                new GetTenantComplianceQuery(id));
+
+            return Ok(result);
+        }
     }
 }

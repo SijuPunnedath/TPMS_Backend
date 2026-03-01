@@ -3,6 +3,8 @@ namespace TPMS.Domain.Entities
     public class Landlord
     {
         public int LandlordID { get; set; }
+        
+        public string LandlordNumber { get; set; }
         public string? Name { get; set; }
         
         //  Back navigation

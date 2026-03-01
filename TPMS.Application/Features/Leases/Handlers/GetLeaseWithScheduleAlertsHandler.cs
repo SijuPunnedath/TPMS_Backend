@@ -24,6 +24,7 @@ namespace TPMS.Application.Features.Leases.Handlers
             var lease = await _db.Leases
                 .Include(l => l.RentSchedules)
                 .Include(l => l.LeaseAlerts)
+                .Include(l => l.Property)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(l => l.LeaseID == request.LeaseId && !l.IsDeleted, cancellationToken);
 
@@ -35,7 +36,9 @@ namespace TPMS.Application.Features.Leases.Handlers
             return new LeaseWithScheduleAlertsDto
             {
                 LeaseID = lease.LeaseID,
+                LeaseNumber = lease.LeaseNumber,
                 PropertyID = lease.PropertyID,
+                PropertyNumber = lease.Property !=null? lease.Property.PropertyNumber: "",
                 TenantID = lease.TenantID,
                 LandlordID = lease.LandlordID,
                 StartDate = lease.StartDate,

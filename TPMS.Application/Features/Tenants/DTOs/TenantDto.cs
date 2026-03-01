@@ -11,6 +11,7 @@ namespace TPMS.Application.Features.Tenants.DTOs
     public class TenantDto
     {
         public int TenantID { get; set; }
+        public string TenantNumber { get; set; }
         public string Name { get; set; } = string.Empty;
         public string? Notes { get; set; }
         public DateTime CreatedAt { get; set; }

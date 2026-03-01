@@ -162,6 +162,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\company-logos\company_logo_f373712a-5c6b-4232-adef-360dd402c347.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\general\General_7\Adobe Scan 20 Nov 2025 (3)_page-0001.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>TPMS.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TPMS.API</BasePath>
+      <RelativePath>uploads/general/General_7/Adobe Scan 20 Nov 2025 (3)_page-0001.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>wszfzq6unl</Fingerprint>
+      <Integrity>AO4R1z27H+kNgHU7Uq0IpA/Dys74yjr7kcwXjKNENGQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\general\General_7\Adobe Scan 20 Nov 2025 (3)_page-0001.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\landlord\Landlord_2\Anil-New.numbers'))">
       <SourceType>Package</SourceType>
       <SourceId>TPMS.API</SourceId>

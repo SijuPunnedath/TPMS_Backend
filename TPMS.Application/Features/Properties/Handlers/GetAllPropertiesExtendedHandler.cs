@@ -25,23 +25,24 @@ namespace TPMS.Application.Features.Properties.Handlers
             GetAllPropertiesExtendedQuery request,
             CancellationToken cancellationToken)
         {
-            // 1️⃣ Resolve OwnerTypeID
+            // 1 Resolve OwnerTypeID
             var ownerTypeId = await _db.OwnerTypes
                 .Where(o => o.Name == "Property")
                 .Select(o => o.OwnerTypeID)
                 .FirstAsync(cancellationToken);
 
-            // 2️⃣ Base query
+            // 2 Base query
             IQueryable<Property> query = _db.Properties
                 .AsNoTracking()
                 .Where(p => !p.IsDeleted);
 
-            // 🔹 Filtering
+            //  Filtering
             if (!string.IsNullOrWhiteSpace(request.Type))
                 query = query.Where(p => p.Type == request.Type);
 
             if (request.LandlordId.HasValue)
                 query = query.Where(p => p.LandlordID == request.LandlordId);
+            
 
             if (!string.IsNullOrWhiteSpace(request.City))
             {
@@ -53,7 +54,7 @@ namespace TPMS.Application.Features.Properties.Handlers
                         a.City.ToLower().Contains(city)));
             }
 
-            // 🔹 Search
+            //  Search
             if (!string.IsNullOrWhiteSpace(request.Search))
             {
                 var search = request.Search.ToLower();
@@ -62,7 +63,7 @@ namespace TPMS.Application.Features.Properties.Handlers
                     (p.Notes != null && p.Notes.ToLower().Contains(search)));
             }
 
-            // 🔹 Sorting
+            //  Sorting
             query = request.SortBy?.ToLower() switch
             {
                 "serialno" => request.SortDesc
@@ -84,12 +85,12 @@ namespace TPMS.Application.Features.Properties.Handlers
                 _ => query.OrderBy(p => p.PropertyID)
             };
 
-            // 🔹 Pagination
+            //  Pagination
             query = query
                 .Skip((request.PageNumber - 1) * request.PageSize)
                 .Take(request.PageSize);
 
-            // 3️⃣ Explicit LEFT JOIN + Projection
+            // 3 Explicit LEFT JOIN + Projection
             var properties = await (
                 from p in query
 
@@ -101,6 +102,7 @@ namespace TPMS.Application.Features.Properties.Handlers
                 {
                     PropertyID = p.PropertyID,
                     PropertyName = p.PropertyName,
+                    PropertyNumber = p.PropertyNumber,
                     SerialNo = p.SerialNo,
                     Type = p.Type,
                     Size = p.Size,

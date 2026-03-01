@@ -31,6 +31,7 @@ namespace TPMS.Application.Features.Landlords.Handlers
                 .Select(l => new LandlordDto
                 {
                     LandlordID = l.LandlordID,
+                    LandlordNumber = l.LandlordNumber,
                     Name = l.Name ?? string.Empty,
                     Notes = l.Notes,
                     CreatedAt = l.CreatedAt,

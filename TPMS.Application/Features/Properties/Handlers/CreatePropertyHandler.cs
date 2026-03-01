@@ -7,6 +7,7 @@ using TPMS.Application.Common.Interfaces;
 using TPMS.Application.Features.Properties.Commands;
 using TPMS.Application.Features.Properties.DTOs;
 using TPMS.Domain.Entities;
+using TPMS.Domain.Enums;
 using TPMS.Infrastructure.Persistence.Configurations;
 
 public class CreatePropertyHandler
@@ -35,16 +36,20 @@ public class CreatePropertyHandler
         try
         {
             // --------------------------------------------------
-            // 1️⃣ Create Property
+            // 1 Create Property
             // --------------------------------------------------
             var property = new Property
             {
                 PropertyName = dto.PropertyName.Trim(),
+                PropertyNumber = dto.PropertyNumber,
                 SerialNo = dto.SerialNo,
                 Type = dto.Type,
                 Size = dto.Size,
                 Notes = dto.Notes,
                 LandlordID = dto.LandlordID,
+                Status = PropertyStatus.Draft,
+                ActiveInboundLeaseId = null,
+                ActiveOutboundLeaseId = null,
                 CreatedAt = DateTime.UtcNow,
                 UpdatedAt = DateTime.UtcNow
             };
@@ -53,7 +58,7 @@ public class CreatePropertyHandler
             await _db.SaveChangesAsync(cancellationToken);
 
             // --------------------------------------------------
-            // 2️⃣ Create Address
+            // 2 Create Address
             // --------------------------------------------------
             int propertyOwnerTypeId =
                 _ownerTypeCache.GetOwnerTypeId("Property");
@@ -77,7 +82,7 @@ public class CreatePropertyHandler
             await _db.SaveChangesAsync(cancellationToken);
 
             // --------------------------------------------------
-            // 3️⃣ Reload with Navigation (Landlord)
+            // 3 Reload with Navigation (Landlord)
             // --------------------------------------------------
             var savedProperty = await _db.Properties
                 .Include(p => p.Landlord)
@@ -88,7 +93,7 @@ public class CreatePropertyHandler
             await transaction.CommitAsync(cancellationToken);
 
             // --------------------------------------------------
-            // 4️⃣ Map DTO
+            // 4 Map DTO
             // --------------------------------------------------
             return MapToDto(savedProperty, address);
         }
@@ -100,7 +105,7 @@ public class CreatePropertyHandler
     }
 
     // ------------------------------------------------------
-    // 🔹 Mapping Logic (isolated & reusable)
+    // Mapping Logic (isolated & reusable)
     // ------------------------------------------------------
     private static PropertyDto MapToDto(
         Property property,
@@ -110,11 +115,14 @@ public class CreatePropertyHandler
         {
             PropertyID = property.PropertyID,
             PropertyName = property.PropertyName,
+            PropertyNumber = property.PropertyNumber,
             SerialNo = property.SerialNo,
             Type = property.Type,
             Size = property.Size,
             Notes = property.Notes,
-
+            Status = property.Status,
+            ActiveInboundLeaseId = property.ActiveInboundLeaseId,
+            ActiveOutboundLeaseId = property.ActiveOutboundLeaseId,
             LandlordID = property.LandlordID,
             LandlordName = property.Landlord?.Name,
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TPMS.Application.Features.Deposit.DTOs;
+using TPMS.Domain.Enums;
 
 namespace TPMS.Application.Features.Leases.DTOs
 {
@@ -11,12 +12,13 @@ namespace TPMS.Application.Features.Leases.DTOs
     {
         
         public int LeaseID { get; set; }
-        
+        public string LeaseNumber { get; set; }
         public string LeaseName { get; set; } = string.Empty;
         public int PropertyID { get; set; }
+        public string PropertyNumber { get; set; }
         public int? TenantID { get; set; }
         public int? LandlordID { get; set; }
-      
+        public int? ParentLeaseID { get; set; } // For Renewal 
         public string? TenantName { get; set; }
         public string? LandlordName { get; set; }
 
@@ -28,7 +30,8 @@ namespace TPMS.Application.Features.Leases.DTOs
         public decimal Deposit { get; set; }
 
         //ADded 
-        public string Status { get; set; } 
+      //  public string Status { get; set; } 
+      public LeaseStatus? Status { get; set; } = LeaseStatus.Active;
         public string PaymentFrequency { get; set; } 
  
         // new fields

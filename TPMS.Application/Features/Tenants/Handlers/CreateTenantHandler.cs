@@ -28,6 +28,7 @@ namespace TPMS.Application.Features.Tenants.Handlers
         {
             var tenant = new Tenant
             {
+                TenantNumber = request.Tenant.TenantNumber,
                 Name = request.Tenant.Name,
                 Notes = request.Tenant.Notes,
                 CreatedAt = DateTime.UtcNow,

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3sSGRGkvph86Fvt7+htBExhoJW7y1rGcjVbR7n+Io9s=",
+  "Hash": "u5OaX+qzDObD7eR2HTPBTcSr8ApPT87cL879v0ellX4=",
   "Source": "TPMS.API",
   "BasePath": "_content/TPMS.API",
   "Mode": "Default",
@@ -225,6 +225,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/uploads/company-logos/company_logo_f373712a-5c6b-4232-adef-360dd402c347.png"
+    },
+    {
+      "Identity": "/Volumes/Production/TPMS/TPMS/TPMS.API/wwwroot/uploads/general/General_7/Adobe Scan 20 Nov 2025 (3)_page-0001.jpg",
+      "SourceId": "TPMS.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Production/TPMS/TPMS/TPMS.API/wwwroot/",
+      "BasePath": "_content/TPMS.API",
+      "RelativePath": "uploads/general/General_7/Adobe Scan 20 Nov 2025 (3)_page-0001#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wszfzq6unl",
+      "Integrity": "AO4R1z27H+kNgHU7Uq0IpA/Dys74yjr7kcwXjKNENGQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/general/General_7/Adobe Scan 20 Nov 2025 (3)_page-0001.jpg"
     },
     {
       "Identity": "/Volumes/Production/TPMS/TPMS/TPMS.API/wwwroot/uploads/landlord/Landlord_2/Anil-New.numbers",
@@ -1152,6 +1173,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-E6apfEUk4K0gaxw29rFCGDE2u67RWZ09Yx1q1Q180Yo="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/general/General_7/Adobe Scan 20 Nov 2025 (3)_page-0001.jpg",
+      "AssetFile": "/Volumes/Production/TPMS/TPMS/TPMS.API/wwwroot/uploads/general/General_7/Adobe Scan 20 Nov 2025 (3)_page-0001.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "753023"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AO4R1z27H+kNgHU7Uq0IpA/Dys74yjr7kcwXjKNENGQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Feb 2026 17:26:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AO4R1z27H+kNgHU7Uq0IpA/Dys74yjr7kcwXjKNENGQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/general/General_7/Adobe Scan 20 Nov 2025 (3)_page-0001.wszfzq6unl.jpg",
+      "AssetFile": "/Volumes/Production/TPMS/TPMS/TPMS.API/wwwroot/uploads/general/General_7/Adobe Scan 20 Nov 2025 (3)_page-0001.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "753023"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AO4R1z27H+kNgHU7Uq0IpA/Dys74yjr7kcwXjKNENGQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Feb 2026 17:26:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wszfzq6unl"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/general/General_7/Adobe Scan 20 Nov 2025 (3)_page-0001.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AO4R1z27H+kNgHU7Uq0IpA/Dys74yjr7kcwXjKNENGQ="
         }
       ]
     },

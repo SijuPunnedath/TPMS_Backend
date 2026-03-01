@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ using DateTime = System.DateTime;
 
 namespace TPMS.Application.Features.Documents.Services;
 
-public class DocumentQueryService
+public class DocumentQueryService :IDocumentQueryService
 {
    
         private readonly TPMSDBContext _context;
@@ -17,7 +18,6 @@ public class DocumentQueryService
         {
             _context = context;
         }
-
         public async Task<DocumentHealthDto> GetMissingDocumentsAsync(int ownerTypeId, int ownerId)
         {
             // 1. Required documents for this owner type
@@ -61,4 +61,28 @@ public class DocumentQueryService
                 MissingDocuments = missingDocs
             };
         }
-    }
+        
+        public async Task<List<DocumentDto>> GetByOwnerAsync(
+            int ownerTypeId,
+            int ownerId)
+        {
+            return await _context.Documents
+                .Where(d =>
+                    d.OwnerTypeID == ownerTypeId &&
+                    d.OwnerID == ownerId &&
+                    !d.IsDeleted)
+                .Select(d => new DocumentDto
+                {
+                    DocumentID = d.DocumentID,
+                    DocumentName = d.DocumentName,
+                    FileName = d.FileName,
+                    URL = d.URL,
+                    UploadedAt = d.UploadedAt,
+                    DocumentTypeID = d.DocumentTypeID,
+                    ValidFrom = d.ValidFrom,
+                    ValidTo = d.ValidTo,
+                    IsArchived = d.IsArchived
+                })
+                .ToListAsync();
+        }
+}

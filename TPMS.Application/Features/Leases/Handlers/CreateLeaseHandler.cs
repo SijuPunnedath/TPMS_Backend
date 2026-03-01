@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using TPMS.Application.Features.Leases.Commands;
 using TPMS.Domain.Entities;
 using TPMS.Domain.Guards;
@@ -25,18 +26,33 @@ namespace TPMS.Application.Features.Leases.Handlers
 
         public async Task<int> Handle(CreateLeaseCommand request, CancellationToken cancellationToken)
         {
-            var lease = _mapper.Map<Lease>(request.Lease);
+            try
+            { 
+               await using var transaction = await _db.Database.BeginTransactionAsync(cancellationToken);
+
+                var lease = _mapper.Map<Lease>(request.Lease);
+
+                var property = await _db.Properties
+                .FirstOrDefaultAsync(p => p.PropertyID == request.Lease.PropertyID, cancellationToken)
+                ?? throw new InvalidOperationException("Property not found.");
+
+            //  Domain validation (cleaner)
+            EnsureNoActiveLease(property, lease.LeaseType);
 
             lease.CreatedAt = DateTime.UtcNow;
             lease.UpdatedAt = DateTime.UtcNow;
+            lease.Status = LeaseStatus.Active;
 
-            // 🔒 Enforce domain rules
+            //  Enforce domain rules
             LeaseGuard.Validate(lease);
 
             _db.Leases.Add(lease);
-            await _db.SaveChangesAsync(cancellationToken);
+            await _db.SaveChangesAsync(cancellationToken); // LeaseID generated here
 
-            // Deposit logic (post-save, needs LeaseID)
+            //  Update property active lease pointer
+            SetActiveLeasePointer(property, lease);
+
+            //  Deposit logic
             if (lease.Deposit > 0)
             {
                 _db.DepositMasters.Add(new DepositMaster
@@ -50,19 +66,70 @@ namespace TPMS.Application.Features.Leases.Handlers
                         ? "Company deposit to landlord"
                         : "Tenant deposit to company"
                 });
-
-                await _db.SaveChangesAsync(cancellationToken);
             }
-            
-            // 🔹 Generate Rent Schedule
+
+            //  Generate rent schedules
             var schedules = GenerateRentSchedule(lease);
             _db.RentSchedules.AddRange(schedules);
+
             await _db.SaveChangesAsync(cancellationToken);
+           
+            await transaction.CommitAsync(cancellationToken);
 
             return lease.LeaseID;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
-        
-        
+
+        // ==============================
+        // Helper Methods
+        // ==============================
+
+        private static void EnsureNoActiveLease(Property property, LeaseType leaseType)
+        {
+            var hasActiveLease = leaseType switch
+            {
+                LeaseType.Inbound => property.ActiveInboundLeaseId != null,
+                LeaseType.Outbound => property.ActiveOutboundLeaseId != null,
+                _ => false
+            };
+
+            if (hasActiveLease)
+                throw new InvalidOperationException(
+                    $"Property already has active {leaseType} lease.");
+        }
+
+      /*  private static void SetActiveLeasePointer(Property property, Lease lease)
+        {
+            if (lease.LeaseType == LeaseType.Inbound)
+                property.ActiveInboundLeaseId = lease.LeaseID;
+            else
+                property.ActiveOutboundLeaseId = lease.LeaseID;
+        }*/
+      
+      private void SetActiveLeasePointer(Property property, Lease lease)
+      {
+          
+          if (lease.LeaseType == LeaseType.Inbound)
+          {
+              property.ActiveInboundLeaseId = lease.LeaseID;
+              property.ActiveOutboundLeaseId ??= property.ActiveOutboundLeaseId;
+              property.Status = PropertyStatus.Vacant;
+          }
+          else
+          {
+              property.ActiveOutboundLeaseId = lease.LeaseID;
+              property.ActiveInboundLeaseId ??= property.ActiveInboundLeaseId;
+              property.Status = PropertyStatus.Occupied;
+          }
+
+          _db.Entry(property).State = EntityState.Modified;
+      }
+
         private List<RentSchedule> GenerateRentSchedule(Lease lease)
         {
             var schedules = new List<RentSchedule>();
@@ -83,13 +150,11 @@ namespace TPMS.Application.Features.Leases.Handlers
                     "monthly" => dueDate.AddMonths(1),
                     "quarterly" => dueDate.AddMonths(3),
                     "yearly" => dueDate.AddYears(1),
-                    _ => dueDate.AddMonths(1) // default to monthly
+                    _ => dueDate.AddMonths(1)
                 };
             }
 
             return schedules;
         }
     }
-    
-    
 }

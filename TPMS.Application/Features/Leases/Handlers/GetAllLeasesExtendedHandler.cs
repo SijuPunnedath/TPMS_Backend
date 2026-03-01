@@ -11,6 +11,8 @@ using TPMS.Application.Common.Interfaces;
 using TPMS.Application.Common.Models;
 using TPMS.Application.Features.Leases.DTOs;
 using TPMS.Application.Features.Leases.Queries;
+using TPMS.Domain.Entities;
+using TPMS.Domain.Enums;
 using TPMS.Infrastructure.Persistence.Configurations;
 
 namespace TPMS.Application.Features.Leases.Handlers
@@ -45,17 +47,18 @@ namespace TPMS.Application.Features.Leases.Handlers
 
             if (request.PropertyId.HasValue)
                 query = query.Where(l => l.PropertyID == request.PropertyId.Value);
+            
 
-            if (!string.IsNullOrWhiteSpace(request.Status))
-                query = query.Where(l => l.Status.ToLower() == request.Status.ToLower());
-
+            if (request.Status.HasValue)
+                query = query.Where(l => l.Status == request.Status.Value);
+            
             if (request.FromDate.HasValue)
                 query = query.Where(l => l.StartDate >= request.FromDate.Value);
 
             if (request.ToDate.HasValue)
                 query = query.Where(l => l.EndDate <= request.ToDate.Value);
 
-            // 🔹 Keyword search
+            //  Keyword search
             if (!string.IsNullOrWhiteSpace(request.SearchTerm))
             {
                 string keyword = request.SearchTerm.Trim().ToLower();
@@ -79,6 +82,7 @@ namespace TPMS.Application.Features.Leases.Handlers
                 query = query.Where(l =>
                     (l.Tenant != null && l.Tenant.Name.ToLower().Contains(keyword)) ||
                     (l.Landlord != null && l.Landlord.Name.ToLower().Contains(keyword)) ||
+                    (l.Property != null && l.Property.Type.ToLower().Contains(keyword)) ||
                     propertyIdsWithMatchingAddress.Contains(l.PropertyID));
             }
 
@@ -116,7 +120,6 @@ namespace TPMS.Application.Features.Leases.Handlers
                     break;
             }
 
-
             //  Pagination
             var totalRecords = await query.CountAsync(cancellationToken);
 
@@ -129,7 +132,9 @@ namespace TPMS.Application.Features.Leases.Handlers
             var result = leases.Select(l => new LeaseDto
             {
                 LeaseID = l.LeaseID,
+                LeaseNumber = l.LeaseNumber,
                 PropertyID = l.PropertyID,
+                PropertyNumber = l.Property != null ? l.Property.PropertyNumber : "",
                 TenantID = l.TenantID,
                 LandlordID = l.LandlordID,
                 StartDate = l.StartDate,

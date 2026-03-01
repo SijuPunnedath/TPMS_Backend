@@ -83,14 +83,6 @@ F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/M
 F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Npgsql.dll
 F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
-/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.csproj.AssemblyReference.cache
-/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.GeneratedMSBuildEditorConfig.editorconfig
-/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.AssemblyInfoInputs.cache
-/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.AssemblyInfo.cs
-/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.csproj.CoreCompileInputs.cache
-/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.MvcApplicationPartsAssemblyInfo.cs
-/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.MvcApplicationPartsAssemblyInfo.cache
-/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.sourcelink.json
 /Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/appsettings.Development.json
 /Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/appsettings.json
 /Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.API.staticwebassets.runtime.json
@@ -386,6 +378,14 @@ F:/SlashEn TEchnologies/Real-Teanant/SourceCode/TPMS/TPMS.API/bin/Debug/net9.0/S
 /Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.Application.pdb
 /Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.Domain.pdb
 /Volumes/Production/TPMS/TPMS/TPMS.API/bin/Debug/net9.0/TPMS.Infrastructure.pdb
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.csproj.AssemblyReference.cache
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.AssemblyInfoInputs.cache
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.AssemblyInfo.cs
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.csproj.CoreCompileInputs.cache
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.MvcApplicationPartsAssemblyInfo.cs
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.MvcApplicationPartsAssemblyInfo.cache
+/Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/TPMS.API.sourcelink.json
 /Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/scopedcss/bundle/TPMS.API.styles.css
 /Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/compressed/bftbkgfi3p-0imfth5dd3.gz
 /Volumes/Production/TPMS/TPMS/TPMS.API/obj/Debug/net9.0/staticwebassets.build.json

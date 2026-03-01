@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using TPMS.Application.Features.Leases.Commands;
+using TPMS.Domain.Enums;
 using TPMS.Domain.Guards;
 using TPMS.Infrastructure.Persistence.Configurations;
 
@@ -34,7 +35,7 @@ namespace TPMS.Application.Features.Leases.Handlers
             lease.DateMovedIn = request.Lease.DateMovedIn;
             lease.Rent = request.Lease.Rent;
             lease.Deposit = request.Lease.Deposit;
-            lease.Status = request.Lease.Status;
+            lease.Status = request.Lease.Status ?? LeaseStatus.Active;
             lease.PaymentFrequency = request.Lease.PaymentFrequency;
             lease.LeaseType = request.Lease.LeaseType;
             lease.TenantID = request.Lease.TenantID;

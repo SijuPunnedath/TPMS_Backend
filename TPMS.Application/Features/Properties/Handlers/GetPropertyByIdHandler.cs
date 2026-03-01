@@ -36,6 +36,7 @@ namespace TPMS.Application.Features.Properties.Handlers
                 .Select(p => new PropertyDto
                 {
                     PropertyID = p.PropertyID,
+                    PropertyNumber = p.PropertyNumber,
                     PropertyName = p.PropertyName,
                     SerialNo = p.SerialNo,
                     Type = p.Type,

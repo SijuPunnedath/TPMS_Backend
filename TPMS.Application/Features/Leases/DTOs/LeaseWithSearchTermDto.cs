@@ -9,15 +9,17 @@ namespace TPMS.Application.Features.Leases.DTOs
     public class LeaseWithSearchTermDto
     {
         public int LeaseID { get; set; }
+        
+        public string LeaseNumber { get; set; }
         public int PropertyID { get; set; }
-
+        public string PropertyNumber { get; set; }
         public int? TenantID { get; set; }
         public int? LandlordID { get; set; }
 
         public string TenantName { get; set; } = string.Empty;
         public string LandlordName { get; set; } = string.Empty;
         public string PropertyName { get; set; } = string.Empty;
-
+        public int? ParentLeaseID { get; set; } // For Renewal 
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         
@@ -25,7 +27,8 @@ namespace TPMS.Application.Features.Leases.DTOs
         public decimal Rent { get; set; }
         public decimal Deposit { get; set; }
 
-        public string Status { get; set; } = "Active";
+       // public string Status { get; set; } = "Active";
+       public LeaseStatus? Status { get; set; } = LeaseStatus.Active;
         public string PaymentFrequency { get; set; } = "Monthly";
 
         public DateTime CreatedAt { get; set; }

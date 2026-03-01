@@ -150,5 +150,22 @@ namespace TPMS.API.Controllers
             if (!success) return NotFound();
             return NoContent();
         }
+       [HttpGet("{id}/documents")]
+        public async Task<IActionResult> GetDocuments(int id)
+        {
+            var result = await _mediator.Send(
+                new GetLandlordDocumentsQuery(id));
+
+            return Ok(result);
+        }
+
+       [HttpGet("{id}/documents/compliance")]
+        public async Task<IActionResult> GetCompliance(int id)
+        {
+            var result = await _mediator.Send(
+                new GetLandlordComplianceQuery(id));
+
+            return Ok(result);
+        }
     }
 }

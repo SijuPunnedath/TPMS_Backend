@@ -4,5 +4,7 @@ public enum SettlementStatus
 {
     Pending,
     Settled,
-    Disputed
+    Disputed,
+    PartiallySettled,
+    Cancelled
 }

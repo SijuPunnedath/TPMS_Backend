@@ -26,18 +26,13 @@ namespace TPMS.Application.Features.Leases.Handlers
 
         public async Task<List<LeaseDto>> Handle(GetAllLeasesQuery request, CancellationToken cancellationToken)
         {
-            // Base query — exclude soft-deleted leases
-           // var query = _db.Leases
-             //   .Include(l => l.RentSchedules)
-               // .Include(l => l.LeaseAlerts)
-                //.AsNoTracking()
-                //.Where(l => !l.IsDeleted);
-                
+           
                 var query = _db.Leases
                     .Include(l => l.Tenant)
                     .Include(l => l.Landlord)
                     .Include(l => l.RentSchedules)
                     .Include(l => l.LeaseAlerts)
+                    .Include(l => l.Property)
                     .AsNoTracking()
                     .Where(l => !l.IsDeleted);
 
@@ -50,10 +45,12 @@ namespace TPMS.Application.Features.Leases.Handlers
 
             if (request.PropertyId.HasValue)
                 query = query.Where(l => l.PropertyID == request.PropertyId);
-
-            if (!string.IsNullOrEmpty(request.Status))
-                query = query.Where(l => l.Status == request.Status);
-
+            
+            if (request.Status.HasValue)
+            {
+                query = query.Where(l => l.Status == request.Status.Value);
+            }
+           
             if (request.FromDate.HasValue)
                 query = query.Where(l => l.StartDate >= request.FromDate.Value);
 
@@ -67,6 +64,7 @@ namespace TPMS.Application.Features.Leases.Handlers
             //  Use AutoMapper to map entity → DTO (including nested collections)
             var leaseDtos = _mapper.Map<List<LeaseDto>>(leases);
 
+            
             return leaseDtos;
         }
 

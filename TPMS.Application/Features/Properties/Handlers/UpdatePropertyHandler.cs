@@ -31,6 +31,7 @@ namespace TPMS.Application.Features.Properties.Handlers
             property.Size = request.Property.Size;
             property.Notes = request.Property.Notes;
             property.UpdatedAt = DateTime.UtcNow;
+            
 
             var ownerTypeId = await _db.OwnerTypes
                 .Where(o => o.Name == "Property")

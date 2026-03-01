@@ -10,10 +10,13 @@ namespace TPMS.Infrastructure.Persistence.Configurations
         {
             b.HasKey(x => x.LeaseID);
 
+            b.HasIndex(x => x.LeaseNumber)
+                .IsUnique();
+               
             b.Property(l => l.LeaseName)
                 .HasMaxLength(200)
-                .IsRequired();
-
+                .IsRequired(false);
+             
             b.Property(x => x.Rent)
                 .HasPrecision(18, 2);
 
