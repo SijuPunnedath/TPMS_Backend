@@ -117,6 +117,7 @@ public class DisputeConfiguration : IEntityTypeConfiguration<Dispute>
         builder.HasOne(x => x.Resolution)
             .WithOne(r => r.Dispute)
             .HasForeignKey<DisputeResolution>(r => r.DisputeId)
+            .IsRequired(false)
             .OnDelete(DeleteBehavior.Cascade);
 
         // =============================

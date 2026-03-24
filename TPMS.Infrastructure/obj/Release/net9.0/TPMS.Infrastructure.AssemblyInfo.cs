@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TPMS.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2cb78b9d2b6e2ccec11ddebd5474a149a4e6e32f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+401b175af8709e5d26314477842e22d69c4a7933")]
 [assembly: System.Reflection.AssemblyProductAttribute("TPMS.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TPMS.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

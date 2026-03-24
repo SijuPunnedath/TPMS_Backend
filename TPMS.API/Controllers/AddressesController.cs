@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TPMS.Application.Features.Addresses.Commands;
 using TPMS.Application.Features.Addresses.DTOs;
@@ -13,6 +14,7 @@ public class AddressesController : ControllerBase
     private readonly IMediator _mediator;
     public AddressesController(IMediator mediator) => _mediator = mediator;
 
+    
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {

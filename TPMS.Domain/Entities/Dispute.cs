@@ -2,6 +2,56 @@
 using TPMS.Domain.Entities;
 using TPMS.Domain.Enums;
 
+
+
+/*
+public class Dispute
+{
+    public int DisputeId { get; set; }
+    public string DisputeNumber { get; set; }
+
+    public int TenantId { get; set; }
+
+    public int RaisedByUserId { get; set; }
+    public DisputeRaisedBy RaisedBy { get; set; } // Enum
+    public User? RaisedByUser { get; set; }
+
+    public DisputeCategory Category { get; set; } // Only Category
+    public DisputeStatus Status { get; set; } // Only Status
+    public DisputePriority Priority { get; set; }//Only prority
+
+    public string Subject { get; set; }
+    public string Description { get; set; }
+
+    public DisputeReferenceType ReferenceType { get; set; }
+    public int? ReferenceId { get; set; }
+
+    public int? AssignedToUserId { get; set; }
+    public User? AssignedToUser { get; set; }
+
+    public int EscalationLevel { get; set; }
+
+    public DateTime RaisedDate { get; set; }
+    public DateTime? DueDate { get; set; }
+    public DateTime? ClosedAt { get; set; }
+
+    public DateTime CreatedAt { get; set; }
+    public int CreatedByUserId { get; set; }
+
+    public DateTime? UpdatedAt { get; set; }
+    public int? UpdatedByUserId { get; set; }
+
+    public DateTime? DeletedAt { get; set; }
+
+    public bool RequiresFollowUp { get; set; }
+    public DateTime? FollowUpDate { get; set; }
+    public bool IsEscalated { get; set; }
+
+    public ICollection<DisputeComment> Comments { get; set; } = new List<DisputeComment>();
+    public ICollection<DisputeAttachment> Attachments { get; set; } = new List<DisputeAttachment>();
+
+    public DisputeResolution? Resolution { get; set; }
+} */
 public class Dispute
 {
     public int DisputeId { get; set; }

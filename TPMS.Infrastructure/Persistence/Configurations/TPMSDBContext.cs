@@ -568,6 +568,11 @@ namespace TPMS.Infrastructure.Persistence.Configurations
 
                 entity.Property(x => x.AssetTag)
                     .HasMaxLength(50);
+                
+                entity.HasOne<Property>()
+                    .WithMany()
+                    .HasForeignKey(x => x.PropertyId)
+                    .OnDelete(DeleteBehavior.Restrict);
 
                 entity.HasOne<AssetCategory>()
                     .WithMany()
@@ -844,6 +849,16 @@ namespace TPMS.Infrastructure.Persistence.Configurations
             Id = 6,
             ModuleName = "DOCUMENT",
             Prefix = "DOC",
+            CurrentNumber = 0,
+            NumberLength = 6,
+            ResetEveryYear = true,
+            Year = DateTime.UtcNow.Year
+        },
+        new DocumentSequence
+        {
+            Id = 7,
+            ModuleName = "DISPUTE",
+            Prefix = "DSP",
             CurrentNumber = 0,
             NumberLength = 6,
             ResetEveryYear = true,

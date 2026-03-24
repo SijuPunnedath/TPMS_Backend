@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="BackgroundJobs\" />
     <Folder Include="Identity\" />
-    <Folder Include="Persistence\Migrations\" />
   </ItemGroup>
 
   <ItemGroup>

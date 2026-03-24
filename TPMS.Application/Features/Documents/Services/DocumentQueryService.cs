@@ -46,6 +46,7 @@ public class DocumentQueryService :IDocumentQueryService
                 {
                     DocumentTypeID = r.DocumentTypeID,
                     DocumentTypeName = r.DocumentType!.TypeName,
+                    CategoryId = r.DocumentType.DocumentCategoryID,
                     CategoryName = r.DocumentType.Category!.CategoryName,
                     IsMandatory = r.IsMandatory
                 })
@@ -79,6 +80,7 @@ public class DocumentQueryService :IDocumentQueryService
                     URL = d.URL,
                     UploadedAt = d.UploadedAt,
                     DocumentTypeID = d.DocumentTypeID,
+                    DocumentCategoryID = d.DocumentCategoryID,
                     ValidFrom = d.ValidFrom,
                     ValidTo = d.ValidTo,
                     IsArchived = d.IsArchived

@@ -106,7 +106,10 @@ public class PermissionConfiguration : IEntityTypeConfiguration<Permission>
             // ================= ASSET CATEGORY =================
             new Permission { PermissionID = 2201, PermissionName = "ASSET_CATEGORY_ADD", Description = "Permission to add asset category", Module = "Asset Category", IsSystem = true },
             new Permission { PermissionID = 2202, PermissionName = "ASSET_CATEGORY_VIEW", Description = "Permission to view asset category", Module = "Asset Category", IsSystem = true },
-            new Permission { PermissionID = 2203, PermissionName = "ASSET_CATEGORY_EDIT", Description = "Permission to edit asset category", Module = "Asset Category", IsSystem = true }
+            new Permission { PermissionID = 2203, PermissionName = "ASSET_CATEGORY_EDIT", Description = "Permission to edit asset category", Module = "Asset Category", IsSystem = true },
+
+            // ================= USER MANANENENT =================
+            new Permission { PermissionID = 2301, PermissionName = "ROLE_PERMISSION_ASSIGN", Description = "Permission to Manage User permissions", Module = "User Management", IsSystem = true }
         );
     }
 }
