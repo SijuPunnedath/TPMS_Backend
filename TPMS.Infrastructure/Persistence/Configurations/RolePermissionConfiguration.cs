@@ -112,7 +112,12 @@ namespace TPMS.Infrastructure.Persistence.Configurations
                 new RolePermission { RolePermissionID = 68, RoleID = ADMIN_ROLE_ID, PermissionID = 2203 },
                 
                 // ================= ASSET CATEGORY =================
-                new RolePermission { RolePermissionID = 69, RoleID = ADMIN_ROLE_ID, PermissionID = 2301 }
+                new RolePermission { RolePermissionID = 69, RoleID = ADMIN_ROLE_ID, PermissionID = 2301 },
+                
+                // ================= Disputes =================
+                new RolePermission { RolePermissionID = 70, RoleID = ADMIN_ROLE_ID, PermissionID = 2401 },
+                new RolePermission { RolePermissionID = 71, RoleID = ADMIN_ROLE_ID, PermissionID = 2402 }, 
+                new RolePermission { RolePermissionID = 72, RoleID = ADMIN_ROLE_ID, PermissionID = 2403 }
             );
         }
     }

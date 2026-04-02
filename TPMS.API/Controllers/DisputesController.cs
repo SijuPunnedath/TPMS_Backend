@@ -28,18 +28,36 @@ namespace TPMS.API.Controllers
         }
 
         [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var result = await _mediator.Send(new GetDisputeByIdQuery(id));
+
+            return result.IRet == 1 ? Ok(result) : NotFound(result);
+        }
+     /*   [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
             var result = await _mediator.Send(new GetDisputeByIdQuery(id));
             return Ok(result);
-        }
+        } */
 
-        [HttpPut]
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, UpdateDisputeCommand command)
+        {
+            if (id != command.Id)
+                return BadRequest("Invalid request");
+
+            var result = await _mediator.Send(command);
+
+            return Ok(result); 
+        }
+        
+      /*  [HttpPut]
         public async Task<IActionResult> Update(UpdateDisputeCommand command)
         {
             await _mediator.Send(command);
             return NoContent();
-        }
+        }*/
 
       
         
@@ -50,27 +68,29 @@ namespace TPMS.API.Controllers
             return Ok(result);
         } 
       
-
-        [HttpPost("{id}/assign")]
-        public async Task<IActionResult> Assign(int id, [FromBody] int userId)
+        [HttpPut("{id}/assign")]
+        public async Task<IActionResult> Assign(int id, AssignDisputeCommand command)
         {
-            await _mediator.Send(new AssignDisputeCommand(id, userId));
-            return NoContent();
-        }
-        
-        [HttpGet("dashboard")]
-        public async Task<IActionResult> GetDashboard()
-        {
-            // Get TenantId from claims (recommended)   
-           // var tenantId = int.Parse(User.FindFirst("TenantId")!.Value);
+            if (id != command.Id)
+                return BadRequest("Invalid request");
 
-            var result = await _mediator.Send(
-                new GetDisputeDashboardQuery());
+            var result = await _mediator.Send(command);
 
             return Ok(result);
         }
         
-        [HttpGet]
+    
+        
+        [HttpGet("dashboard")]
+        public async Task<IActionResult> GetDashboard()
+        {
+            var result = await _mediator.Send(new GetDisputeDashboardQuery());
+
+            return result.IRet == 1 ? Ok(result) : BadRequest(result);
+        }
+        
+        
+     [HttpGet]
         public async Task<IActionResult> GetAll(
             [FromQuery] int pageNumber = 1,
             [FromQuery] int pageSize = 10,
@@ -87,6 +107,6 @@ namespace TPMS.API.Controllers
                     priority));
 
             return Ok(result);
-        }
+        } 
     }
 }

@@ -1,3 +1,4 @@
+using TPMS.Application.Common.Models;
 using TPMS.Application.Features.Disputes.DTOs;
 
 namespace TPMS.Application.Features.Disputes.Queries;
@@ -5,4 +6,4 @@ namespace TPMS.Application.Features.Disputes.Queries;
 using MediatR;
 
 public record GetDisputeDashboardQuery() 
-    : IRequest<DisputeDashboardDto>;
+    : IRequest<ApiResponse<DisputeDashboardDto>>;

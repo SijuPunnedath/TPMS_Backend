@@ -109,7 +109,13 @@ public class PermissionConfiguration : IEntityTypeConfiguration<Permission>
             new Permission { PermissionID = 2203, PermissionName = "ASSET_CATEGORY_EDIT", Description = "Permission to edit asset category", Module = "Asset Category", IsSystem = true },
 
             // ================= USER MANANENENT =================
-            new Permission { PermissionID = 2301, PermissionName = "ROLE_PERMISSION_ASSIGN", Description = "Permission to Manage User permissions", Module = "User Management", IsSystem = true }
-        );
+            new Permission { PermissionID = 2301, PermissionName = "ROLE_PERMISSION_ASSIGN", Description = "Permission to Manage User permissions", Module = "User Management", IsSystem = true },
+       
+            // ================= Disputes =================
+            new Permission { PermissionID = 2401, PermissionName = "DISPUTE_CREATE", Description = "Permission to Create Disputes", Module = "Disputes", IsSystem = true },
+            new Permission { PermissionID = 2402, PermissionName = "DISPUTE_UPDATE", Description = "Permission to Update Disputes", Module = "Disputes", IsSystem = true },
+            new Permission { PermissionID = 2403, PermissionName = "DISPUTE_DELETE", Description = "Permission to Delete Disputes", Module = "Disputes", IsSystem = true }
+
+            );
     }
 }

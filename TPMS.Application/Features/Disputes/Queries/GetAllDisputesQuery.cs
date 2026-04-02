@@ -10,4 +10,4 @@ public record GetAllDisputesQuery(
     int PageSize = 10,
     DisputeStatus? Status = null,
     DisputePriority? Priority = null
-) : IRequest<PagedResult<DisputeListDto>>;
+) : IRequest<ApiResponse<PagedResult<DisputeListDto>>>;
